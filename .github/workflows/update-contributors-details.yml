@@ -2,10 +2,8 @@ name: update-contributor-details
 
 on:
   pull_request_target:
-    types:
-      - closed
-    branches:
-      - main
+    types: [closed]
+    branches: [main]
 
 env:
   REPO_NAME: ${{ github.repository }}
@@ -14,7 +12,7 @@ env:
 
 jobs:
   update-by-pr:
-    if: ${{ github.event.pull_request.title != 'init' }}
+    if: ${{ github.event.pull_request.title != 'init' && github.event.pull_request.merged == true }}
     runs-on: ubuntu-latest
 
     permissions:
