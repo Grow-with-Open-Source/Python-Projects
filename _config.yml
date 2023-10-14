@@ -1,0 +1,22 @@
+theme: jekyll-theme-cayman
+title: 'Python-Projects'
+page_title: 'Jumpstart Open-Source with Python'
+description: 'Start Your Open-Source Journey with Python Projects'
+logo: 'assets/img/favicon.ico'
+defaults:
+  - scope:
+      path: ''
+    values:
+      image: 
+        path: 'assets/img/page-cover.png'
+        height: 630
+        width: 1200
+exclude:
+  - .gitignore
+  - README.md
+  - CONTRIBUTING.md
+  - CODE_OF_CONDUCT.md
+  - LICENSE
+
+# For reference, Jekyll SEO Tag:
+# https://github.com/jekyll/jekyll-seo-tag/blob/master/lib/template.html
