@@ -1,4 +1,4 @@
-name: Lint Python Code
+name: lint-python-code
 
 on:
   pull_request:
