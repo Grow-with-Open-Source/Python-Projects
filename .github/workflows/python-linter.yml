@@ -1,0 +1,28 @@
+name: Lint Python Code
+
+on:
+  pull_request:
+    branches: [main]
+    paths: ['**.py']
+
+jobs:
+  python-linter:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checking out repo
+      uses: actions/checkout@v4.1.0
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Install dependencies
+      run: |
+        pip install flake8
+
+    - name: Lint Python Code
+      run: |
+        flake8 . --select=E901,E999,F821,F822,F823 --exclude=__init__.py
+      env:
+        FLAKE8_OPTIONS: "--ignore=E203,W503"
