@@ -9,7 +9,7 @@ Welcome to **Python-Projects**, your friendly initiation into the world of open-
 <!-- TABLE BEGINS -->
 | Project Title | Contributor Names | Pull Requests | Demo |
 | --- | --- | --- | --- |
-| {init} | [iamwatchdogs](https://github.com/iamwatchdogs "goto iamwatchdogs profile") | [#1](https://github.com/Grow-with-Open-Source/Python-Projects/pull/1 "visit pr \#1") | [/Grow-with-Open-Source/](https://github.com/Grow-with-Open-Source/ "view the result of {init}") |
+| {init} | [iamwatchdogs](https://github.com/iamwatchdogs "goto iamwatchdogs profile") | [#1](https://github.com/Grow-with-Open-Source/Python-Projects/pull/1 "visit pr \#1") | [/Grow-with-Open-Source/Python-Projects/](https://github.com/Grow-with-Open-Source/Python-Projects "view the result of {init}") |
 <!-- TABLE ENDS -->
 
 </div>
