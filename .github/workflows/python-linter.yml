@@ -20,7 +20,8 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install flake pynblint
+        pip install flake 
+        pip install pynblint
 
     - name: Lint Python Code
       run: |
