@@ -3,7 +3,7 @@ name: lint-python-code
 on:
   pull_request:
     branches: [main]
-    paths: ['**.py']
+    paths: ['**.py',  '**.ipynb']
   workflow_call:
 
 jobs:
@@ -21,9 +21,28 @@ jobs:
     - name: Install dependencies
       run: |
         pip install flake8
+        pip install pynblint
 
     - name: Lint Python Code
       run: |
         flake8 . --select=E901,E999,F821,F822,F823 --exclude=__init__.py
       env:
         FLAKE8_OPTIONS: "--ignore=E203,W503"
+
+    - name: Collecting file paths
+      run: |
+        touch pr.json
+        gh pr view $PR_NUMBER --json files > pr.json
+
+    - name: Linting all Jupyter Notebook files
+      uses: jannekem/run-python-script-action@v1.6
+      with:
+        script: |
+          import os
+          import json
+          with open('pr.json','r') as json_file:
+            data = json.load(json_file)
+            for file in data["files"]:
+              path = file["path"]
+              if os.path.exists(path):
+                os.system(f"pynblint {path}")
