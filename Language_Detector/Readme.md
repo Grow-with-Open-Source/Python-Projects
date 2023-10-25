@@ -1,0 +1,1 @@
+This is a Language Detector which Detects the language which is entered as an input when you run the program.
