@@ -20,8 +20,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install flake8
-        pip install pynblint
+        pip install flake pynblint
 
     - name: Lint Python Code
       run: |
@@ -29,10 +28,14 @@ jobs:
       env:
         FLAKE8_OPTIONS: "--ignore=E203,W503"
 
-    - name: Collecting file paths
+    - name: Getting PR details
       run: |
         touch pr.json
         gh pr view $PR_NUMBER --json files > pr.json
+        touch pr.json
+      env:
+        PR_NUMBER: ${{ github.event.pull_request.number }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Linting all Jupyter Notebook files
       uses: jannekem/run-python-script-action@v1.6
