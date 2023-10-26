@@ -16,5 +16,14 @@
       "4"
     ],
     "demo-path": "Language_Detector"
+  },
+  "TIC_TAC_TOE": {
+    "contributor-name": [
+      "06RAVI06"
+    ],
+    "pull-request-number": [
+      "7"
+    ],
+    "demo-path": "TIC_TAC_TOE"
   }
 }
