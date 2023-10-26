@@ -12,6 +12,7 @@ Welcome to **Python-Projects**, your friendly initiation into the world of open-
 | {init} | [iamwatchdogs](https://github.com/iamwatchdogs "goto iamwatchdogs profile") | [#1](https://github.com/Grow-with-Open-Source/Python-Projects/pull/1 "visit pr \#1") | [/Grow-with-Open-Source/Python-Projects/](https://github.com/Grow-with-Open-Source/Python-Projects "view the result of {init}") |
 | Language_Detector | [rahulch-1](https://github.com/rahulch-1 "goto rahulch-1 profile") | [#4](https://github.com/Grow-with-Open-Source/Python-Projects/pull/4 "visit pr \#4") | [/Grow-with-Open-Source/Python-Projects/Language_Detector/](Language_Detector "view the result of Language_Detector") |
 | TIC_TAC_TOE | [06RAVI06](https://github.com/06RAVI06 "goto 06RAVI06 profile") | [#7](https://github.com/Grow-with-Open-Source/Python-Projects/pull/7 "visit pr \#7") | [/Grow-with-Open-Source/Python-Projects/TIC_TAC_TOE/](TIC_TAC_TOE "view the result of TIC_TAC_TOE") |
+| Weather_Forecasting | [rahulch-1](https://github.com/rahulch-1 "goto rahulch-1 profile") | [#6](https://github.com/Grow-with-Open-Source/Python-Projects/pull/6 "visit pr \#6") | [/Grow-with-Open-Source/Python-Projects/Weather_Forecasting/](Weather_Forecasting "view the result of Weather_Forecasting") |
 <!-- TABLE ENDS -->
 
 </div>

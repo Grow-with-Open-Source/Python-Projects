@@ -25,5 +25,14 @@
       "7"
     ],
     "demo-path": "TIC_TAC_TOE"
+  },
+  "Weather_Forecasting": {
+    "contributor-name": [
+      "rahulch-1"
+    ],
+    "pull-request-number": [
+      "6"
+    ],
+    "demo-path": "Weather_Forecasting"
   }
 }
