@@ -10,6 +10,7 @@ Welcome to **Python-Projects**, your friendly initiation into the world of open-
 | Project Title | Contributor Names | Pull Requests | Demo |
 | --- | --- | --- | --- |
 | {init} | [iamwatchdogs](https://github.com/iamwatchdogs "goto iamwatchdogs profile") | [#1](https://github.com/Grow-with-Open-Source/Python-Projects/pull/1 "visit pr \#1") | [/Grow-with-Open-Source/Python-Projects/](https://github.com/Grow-with-Open-Source/Python-Projects "view the result of {init}") |
+| Language_Detector | [rahulch-1](https://github.com/rahulch-1 "goto rahulch-1 profile") | [#4](https://github.com/Grow-with-Open-Source/Python-Projects/pull/4 "visit pr \#4") | [/Grow-with-Open-Source/Python-Projects/Language_Detector/](Language_Detector "view the result of Language_Detector") |
 <!-- TABLE ENDS -->
 
 </div>
