@@ -34,5 +34,14 @@
       "6"
     ],
     "demo-path": "Weather_Forecasting"
+  },
+  "Animal-Guess": {
+    "contributor-name": [
+      "ShashiNova"
+    ],
+    "pull-request-number": [
+      "8"
+    ],
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Animal-Guess"
   }
 }
