@@ -70,5 +70,14 @@
       "11"
     ],
     "demo-path": "QRCODE-Generator"
+  },
+  "root": {
+    "contributor-name": [
+      "ShashiNova"
+    ],
+    "pull-request-number": [
+      "12"
+    ],
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/"
   }
 }
