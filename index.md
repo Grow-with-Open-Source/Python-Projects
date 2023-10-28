@@ -16,6 +16,7 @@ Welcome to **Python-Projects**, your friendly initiation into the world of open-
 | Animal-Guess | [ShashiNova](https://github.com/ShashiNova "goto ShashiNova profile") | [#8](https://github.com/Grow-with-Open-Source/Python-Projects/pull/8 "visit pr \#8") | [/Grow-with-Open-Source/Python-Projects/Animal-Guess/](https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Animal-Guess "view the result of Animal-Guess") |
 | Wine-Quality-Analysis | [06RAVI06](https://github.com/06RAVI06 "goto 06RAVI06 profile") | [#9](https://github.com/Grow-with-Open-Source/Python-Projects/pull/9 "visit pr \#9") | [/Grow-with-Open-Source/Python-Projects/Wine-Quality-Analysis/](https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Wine-Quality-Analysis "view the result of Wine-Quality-Analysis") |
 | Spell-Checker | [06RAVI06](https://github.com/06RAVI06 "goto 06RAVI06 profile") | [#10](https://github.com/Grow-with-Open-Source/Python-Projects/pull/10 "visit pr \#10") | [/Grow-with-Open-Source/Python-Projects/Spell-Checker/](Spell-Checker "view the result of Spell-Checker") |
+| QRCODE-Generator | [06RAVI06](https://github.com/06RAVI06 "goto 06RAVI06 profile") | [#11](https://github.com/Grow-with-Open-Source/Python-Projects/pull/11 "visit pr \#11") | [/Grow-with-Open-Source/Python-Projects/QRCODE-Generator/](QRCODE-Generator "view the result of QRCODE-Generator") |
 <!-- TABLE ENDS -->
 
 </div>

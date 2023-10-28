@@ -61,5 +61,14 @@
       "10"
     ],
     "demo-path": "Spell-Checker"
+  },
+  "QRCODE-Generator": {
+    "contributor-name": [
+      "06RAVI06"
+    ],
+    "pull-request-number": [
+      "11"
+    ],
+    "demo-path": "QRCODE-Generator"
   }
 }
