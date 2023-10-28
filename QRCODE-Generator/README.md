@@ -40,11 +40,11 @@ Click on the generated QR code, and it will open the URL in your default web bro
 
 ## OUTPUT
 
-![Screenshot 2023-10-28 165503](https://github.com/06RAVI06/QRCODE/assets/107626246/38aeef8e-c24c-4432-a512-fd437a1efee5)
+<div align= "center">
 
+<img src="assets/img/imgg1.png">
+<img src="assets/img/imgg2.png">
 
-![Screenshot 2023-10-28 165524](https://github.com/06RAVI06/QRCODE/assets/107626246/509c3aee-0b8f-421a-acae-25564c60613e)
-
-
+</div>
 Contributing
 Feel free to contribute to this project by submitting issues, feature requests, or pull requests.
