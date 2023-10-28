@@ -43,5 +43,14 @@
       "8"
     ],
     "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Animal-Guess"
+  },
+  "Wine-Quality-Analysis": {
+    "contributor-name": [
+      "06RAVI06"
+    ],
+    "pull-request-number": [
+      "9"
+    ],
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Wine-Quality-Analysis"
   }
 }

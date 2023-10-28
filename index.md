@@ -14,6 +14,7 @@ Welcome to **Python-Projects**, your friendly initiation into the world of open-
 | TIC_TAC_TOE | [06RAVI06](https://github.com/06RAVI06 "goto 06RAVI06 profile") | [#7](https://github.com/Grow-with-Open-Source/Python-Projects/pull/7 "visit pr \#7") | [/Grow-with-Open-Source/Python-Projects/TIC_TAC_TOE/](TIC_TAC_TOE "view the result of TIC_TAC_TOE") |
 | Weather_Forecasting | [rahulch-1](https://github.com/rahulch-1 "goto rahulch-1 profile") | [#6](https://github.com/Grow-with-Open-Source/Python-Projects/pull/6 "visit pr \#6") | [/Grow-with-Open-Source/Python-Projects/Weather_Forecasting/](Weather_Forecasting "view the result of Weather_Forecasting") |
 | Animal-Guess | [ShashiNova](https://github.com/ShashiNova "goto ShashiNova profile") | [#8](https://github.com/Grow-with-Open-Source/Python-Projects/pull/8 "visit pr \#8") | [/Grow-with-Open-Source/Python-Projects/Animal-Guess/](https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Animal-Guess "view the result of Animal-Guess") |
+| Wine-Quality-Analysis | [06RAVI06](https://github.com/06RAVI06 "goto 06RAVI06 profile") | [#9](https://github.com/Grow-with-Open-Source/Python-Projects/pull/9 "visit pr \#9") | [/Grow-with-Open-Source/Python-Projects/Wine-Quality-Analysis/](https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Wine-Quality-Analysis "view the result of Wine-Quality-Analysis") |
 <!-- TABLE ENDS -->
 
 </div>
