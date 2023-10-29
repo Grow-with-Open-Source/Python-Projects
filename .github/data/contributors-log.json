@@ -71,8 +71,8 @@
     ],
     "demo-path": "QRCODE-Generator"
   },
-  "Music-Player":{
-     "contributor-name": [
+  "Music-Player": {
+    "contributor-name": [
       "ShashiNova"
     ],
     "pull-request-number": [
@@ -97,5 +97,14 @@
       "16"
     ],
     "demo-path": "Hungry_Serpent"
+  },
+  "Web-Blocker": {
+    "contributor-name": [
+      "ShashiNova"
+    ],
+    "pull-request-number": [
+      "14"
+    ],
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Web-Blocker"
   }
 }
