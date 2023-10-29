@@ -71,15 +71,23 @@
     ],
     "demo-path": "QRCODE-Generator"
   },
-  "root": {
+  "Music-Player":{
+     "contributor-name": [
+      "ShashiNova"
+    ],
+    "pull-request-number": [
+      "12"
+    ],
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/Music-Player/"
+  },
+  "Password-Generator": {
     "contributor-name": [
       "ShashiNova"
     ],
     "pull-request-number": [
-      "12",
       "13"
     ],
-    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/"
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/Password-Generator/"
   },
   "Hungry_Serpent": {
     "contributor-name": [
