@@ -80,5 +80,14 @@
       "13"
     ],
     "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/"
+  },
+  "Hungry_Serpent": {
+    "contributor-name": [
+      "AnilKumarTeegala"
+    ],
+    "pull-request-number": [
+      "16"
+    ],
+    "demo-path": "Hungry_Serpent"
   }
 }
