@@ -32,7 +32,7 @@ Welcome to the Snake Game! This classic arcade game allows you to control a snak
 
 2. **Run the Game:**
    ```
-   python snake_game.py
+   python Hungry_Serpent.py
    ```
 
 ## Requirements
