@@ -1,6 +1,6 @@
 ---
 
-# Snake Game
+# Hungry_Serpent Snake Game
 
 Welcome to the Snake Game! This classic arcade game allows you to control a snake as it moves around the screen, eating food and growing longer with each meal. Be careful not to collide with the walls or yourself!
 
