@@ -41,5 +41,5 @@ def block_websites(start_hour, end_hour):
         time.sleep(3)
 
 
-if _name_ == "_main_":
+if __name__ == "_main_":
     block_websites(9, 21)
