@@ -13,9 +13,6 @@ def main():
             print("Just right!")
             break
 # make sure whatever the user inputted is a positive integer.
-
-
-
 def is_positive_integer(n):
     """This function takes an input and check if the user input is an integer"""
     while True:
@@ -28,8 +25,6 @@ def is_positive_integer(n):
         else:
             return True
 #Prompt the user for an input and check if what user inputted is a positive interger
-
-
 def get_user_input():
     """Prompt the user for an input and check if it's a positive integer"""
     while True:
@@ -37,8 +32,6 @@ def get_user_input():
         if (is_positive_integer(user_input)):
             return int(user_input)
 #Prompt the user to guess and check if that number is a positive integer.
-
-
 def guess():
     "Prompt the user for an input guess, and check if it's an integer"
     while True:
@@ -47,8 +40,6 @@ def guess():
             return user_guess
 # call get_user_input which collects an input from user and check if it's an integer
 # Randomize the number collected from the get_user_input function and return it.
-
-
 def randomize_no():
     """Randomize number"""
     user_inputted_number = get_user_input()
