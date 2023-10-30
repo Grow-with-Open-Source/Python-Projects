@@ -1,3 +1,2 @@
 userinput = input("")
-
 print(userinput)
