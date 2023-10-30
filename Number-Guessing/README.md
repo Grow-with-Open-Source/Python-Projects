@@ -1,0 +1,1 @@
+Number guessing is a simple number guessing game where the player sets the range of numbers they would like to guess from and tries to guess a randomly generated number within that range. The program guides the player with feedback until they guess the correct number.
