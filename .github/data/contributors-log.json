@@ -106,5 +106,14 @@
       "14"
     ],
     "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Web-Blocker"
+  },
+  "File_Organizer": {
+    "contributor-name": [
+      "adedayoprcs"
+    ],
+    "pull-request-number": [
+      "15"
+    ],
+    "demo-path": "File_Organizer"
   }
 }
