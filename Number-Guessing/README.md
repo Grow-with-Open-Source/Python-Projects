@@ -1,1 +1,0 @@
-Number Guessing is a simple guessing game program where the player sets the range of numbers to guess fromm and tries to guess a randomly generated number within that range. The program guides the player with feedback until they guess the correct number.
