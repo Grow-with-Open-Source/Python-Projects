@@ -124,5 +124,14 @@
       "19"
     ],
     "demo-path": "Number-Guess"
+  },
+  "Remove-Empty-Lines": {
+    "contributor-name": [
+      "adedayoprcs"
+    ],
+    "pull-request-number": [
+      "20"
+    ],
+    "demo-path": "Remove-Empty-Lines"
   }
 }

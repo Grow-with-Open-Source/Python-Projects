@@ -23,6 +23,7 @@ Welcome to **Python-Projects**, your friendly initiation into the world of open-
 | Web-Blocker | [ShashiNova](https://github.com/ShashiNova "goto ShashiNova profile") | [#14](https://github.com/Grow-with-Open-Source/Python-Projects/pull/14 "visit pr \#14") | [/Grow-with-Open-Source/Python-Projects/Web-Blocker/](https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Web-Blocker "view the result of Web-Blocker") |
 | File_Organizer | [adedayoprcs](https://github.com/adedayoprcs "goto adedayoprcs profile") | [#15](https://github.com/Grow-with-Open-Source/Python-Projects/pull/15 "visit pr \#15") | [/Grow-with-Open-Source/Python-Projects/File_Organizer/](File_Organizer "view the result of File_Organizer") |
 | Number-Guess | [adedayoprcs](https://github.com/adedayoprcs "goto adedayoprcs profile") | [#19](https://github.com/Grow-with-Open-Source/Python-Projects/pull/19 "visit pr \#19") | [/Grow-with-Open-Source/Python-Projects/Number-Guess/](Number-Guess "view the result of Number-Guess") |
+| Remove-Empty-Lines | [adedayoprcs](https://github.com/adedayoprcs "goto adedayoprcs profile") | [#20](https://github.com/Grow-with-Open-Source/Python-Projects/pull/20 "visit pr \#20") | [/Grow-with-Open-Source/Python-Projects/Remove-Empty-Lines/](Remove-Empty-Lines "view the result of Remove-Empty-Lines") |
 <!-- TABLE ENDS -->
 
 </div>
