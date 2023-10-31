@@ -1,3 +1,0 @@
-userinput = input("")
-
-print(userinput)
