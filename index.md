@@ -22,6 +22,7 @@ Welcome to **Python-Projects**, your friendly initiation into the world of open-
 | Hungry_Serpent | [AnilKumarTeegala](https://github.com/AnilKumarTeegala "goto AnilKumarTeegala profile") | [#16](https://github.com/Grow-with-Open-Source/Python-Projects/pull/16 "visit pr \#16") | [/Grow-with-Open-Source/Python-Projects/Hungry_Serpent/](Hungry_Serpent "view the result of Hungry_Serpent") |
 | Web-Blocker | [ShashiNova](https://github.com/ShashiNova "goto ShashiNova profile") | [#14](https://github.com/Grow-with-Open-Source/Python-Projects/pull/14 "visit pr \#14") | [/Grow-with-Open-Source/Python-Projects/Web-Blocker/](https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Web-Blocker "view the result of Web-Blocker") |
 | File_Organizer | [adedayoprcs](https://github.com/adedayoprcs "goto adedayoprcs profile") | [#15](https://github.com/Grow-with-Open-Source/Python-Projects/pull/15 "visit pr \#15") | [/Grow-with-Open-Source/Python-Projects/File_Organizer/](File_Organizer "view the result of File_Organizer") |
+| Number-Guess | [adedayoprcs](https://github.com/adedayoprcs "goto adedayoprcs profile") | [#19](https://github.com/Grow-with-Open-Source/Python-Projects/pull/19 "visit pr \#19") | [/Grow-with-Open-Source/Python-Projects/Number-Guess/](Number-Guess "view the result of Number-Guess") |
 <!-- TABLE ENDS -->
 
 </div>

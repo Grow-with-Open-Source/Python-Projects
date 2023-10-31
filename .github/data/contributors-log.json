@@ -115,5 +115,14 @@
       "15"
     ],
     "demo-path": "File_Organizer"
+  },
+  "Number-Guess": {
+    "contributor-name": [
+      "adedayoprcs"
+    ],
+    "pull-request-number": [
+      "19"
+    ],
+    "demo-path": "Number-Guess"
   }
 }
