@@ -24,6 +24,7 @@ Welcome to **Python-Projects**, your friendly initiation into the world of open-
 | File_Organizer | [adedayoprcs](https://github.com/adedayoprcs "goto adedayoprcs profile") | [#15](https://github.com/Grow-with-Open-Source/Python-Projects/pull/15 "visit pr \#15") | [/Grow-with-Open-Source/Python-Projects/File_Organizer/](File_Organizer "view the result of File_Organizer") |
 | Number-Guess | [adedayoprcs](https://github.com/adedayoprcs "goto adedayoprcs profile") | [#19](https://github.com/Grow-with-Open-Source/Python-Projects/pull/19 "visit pr \#19") | [/Grow-with-Open-Source/Python-Projects/Number-Guess/](Number-Guess "view the result of Number-Guess") |
 | Remove-Empty-Lines | [adedayoprcs](https://github.com/adedayoprcs "goto adedayoprcs profile") | [#20](https://github.com/Grow-with-Open-Source/Python-Projects/pull/20 "visit pr \#20") | [/Grow-with-Open-Source/Python-Projects/Remove-Empty-Lines/](Remove-Empty-Lines "view the result of Remove-Empty-Lines") |
+| Pomodoro-Timer | [adedayoprcs](https://github.com/adedayoprcs "goto adedayoprcs profile") | [#21](https://github.com/Grow-with-Open-Source/Python-Projects/pull/21 "visit pr \#21") | [/Grow-with-Open-Source/Python-Projects/Pomodoro-Timer/](Pomodoro-Timer "view the result of Pomodoro-Timer") |
 <!-- TABLE ENDS -->
 
 </div>

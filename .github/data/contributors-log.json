@@ -133,5 +133,14 @@
       "20"
     ],
     "demo-path": "Remove-Empty-Lines"
+  },
+  "Pomodoro-Timer": {
+    "contributor-name": [
+      "adedayoprcs"
+    ],
+    "pull-request-number": [
+      "21"
+    ],
+    "demo-path": "Pomodoro-Timer"
   }
 }
