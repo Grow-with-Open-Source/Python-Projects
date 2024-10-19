@@ -142,5 +142,14 @@
       "21"
     ],
     "demo-path": "Pomodoro-Timer"
+  },
+  "{others}": {
+    "contributor-name": [
+      "iamwatchdogs"
+    ],
+    "pull-request-number": [
+      "22"
+    ],
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/.github"
   }
 }
