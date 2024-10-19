@@ -11,7 +11,26 @@ This script requires following environment variables:
   > GitHub action variable: ${{ github.repository }}
 '''
 
+
 def find_table_points(lines):
+	"""
+	Find table points within a given list of lines.
+
+	The table points are determined by the presence of the markers:
+		<!-- TABLE BEGINS -->
+		<!-- TABLE ENDS -->
+
+	Args:
+		lines (list): List of lines to search in.
+
+	Returns:
+		tuple: A tuple of two integers containing the start and end indices of
+			the table points.
+
+	Raises:
+		SystemExit: If the table markers are not found or if the table end
+			marker appears before the table start marker.
+	"""
 
 	# Setting default return values
 	table_start = None
@@ -42,6 +61,18 @@ def find_table_points(lines):
 
 
 def main():
+	"""
+	Update the index.md file with the latest contributors data.
+
+	This function retrieves the REPO_NAME environment variable and the
+	CONTRIBUTORS_LOG file path. It then reads the log file and extracts the
+	data from it. The function then reads the index.md file and calculates
+	the table points. If the table does not exist, it creates the table
+	header. The function then iterates over the log data and updates the
+	table with the latest data. Finally, it updates the index.md file with
+	the updated data and prints a success message.
+
+	"""
 
 	# Retrieving Environmental variables
 	REPO_NAME = os.environ.get('REPO_NAME')
@@ -64,7 +95,8 @@ def main():
 	# Creating table header if doesn't exist
 	if table_end - table_start == 1:
 		table_header = list()
-		table_header.append('| Project Title | Contributor Names | Pull Requests | Demo |\n')
+		table_header.append(
+			'| Project Title | Contributor Names | Pull Requests | Demo |\n')
 		table_header.append('| --- | --- | --- | --- |\n')
 		lines[table_start+1:table_end] = table_header
 
@@ -76,12 +108,14 @@ def main():
 
 		# Processing contributors-names
 		contributors_names = details['contributor-name']
-		contributors_names_list = [f'[{name}](https://github.com/{name} "goto {name} profile")' for name in contributors_names]
+		contributors_names_list = [
+			f'[{name}](https://github.com/{name} "goto {name} profile")' for name in contributors_names]
 		contributors_names_output = ', '.join(contributors_names_list)
 
 		# Processing pull-requests
 		pull_requests = details['pull-request-number']
-		pull_requests_list = [f'[#{pr}](https://github.com/{REPO_NAME}/pull/{pr} "visit pr \#{pr}")' for pr in pull_requests]
+		pull_requests_list = [
+			f'[#{pr}](https://github.com/{REPO_NAME}/pull/{pr} "visit pr \#{pr}")' for pr in pull_requests]
 		pull_requests_output = ', '.join(pull_requests_list)
 
 		# Processing demo-path
@@ -91,9 +125,16 @@ def main():
 		demo_path_output = f'[/{REPO_NAME}/{title}/]({demo_path} "view the result of {title}")'
 		if title == 'root' or title == '{init}':
 			demo_path_output = f'[/{REPO_NAME}/]({demo_path} "view the result of {title}")'
+		elif title == '{workflows}':
+			demo_path_output = f'[/{REPO_NAME}/.github/workflows]({demo_path} "view the result of {title}")'
+		elif title == '{scripts}':
+			demo_path_output = f'[/{REPO_NAME}/.github/scripts]({demo_path} "view the result of {title}")'
+		elif title == '{others}':
+			demo_path_output = f'[/{REPO_NAME}/.github]({demo_path} "view the result of {title}")'
 
 		# Appending all data together
-		updated_lines.append(f'| {title} | {contributors_names_output} | {pull_requests_output} | {demo_path_output} |\n')
+		updated_lines.append(
+			f'| {title} | {contributors_names_output} | {pull_requests_output} | {demo_path_output} |\n')
 
 	# Updating the lines with updated data
 	lines[table_start+3:table_end] = updated_lines

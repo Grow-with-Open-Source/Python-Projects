@@ -1,0 +1,28 @@
+name: Auto-commenter
+
+on:
+  pull_request_target:
+    types: [opened, closed]
+
+permissions:
+  id-token: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  automated-message:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wow-actions/auto-comment@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          pullRequestOpened: |
+            👋 @{{ author }}
+            Thank you for raising your pull request.
+            Please make sure you have followed our contributing guidelines. We will review it as soon as possible.
+
+          pullRequestClosed: |
+            👋 @{{ author }} This PR is closed. If you think there's been a mistake, please contact the maintainer @iamwatchdogs.
+
+          pullRequestMerged: |
+            Thank you for contributing @{{ author }}. Make sure to check your contribution on [GitHub Pages](https://grow-with-open-source.github.io/Python-Projects/ "view contributions").

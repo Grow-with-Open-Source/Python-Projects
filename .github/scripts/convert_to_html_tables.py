@@ -11,7 +11,26 @@ This script requires following environment variables:
   > GitHub action variable: ${{ github.repository }}
 '''
 
+
 def find_table_points(lines):
+	"""
+	Find table points within a given list of lines.
+
+	The table points are determined by the presence of the markers:
+		<!-- TABLE BEGINS -->
+		<!-- TABLE ENDS -->
+
+	Args:
+		lines (list): List of lines to search in.
+
+	Returns:
+		tuple: A tuple of two integers containing the start and end indices of
+			the table points.
+
+	Raises:
+		SystemExit: If the table markers are not found or if the table end
+			marker appears before the table start marker.
+	"""
 
 	# Setting default return values
 	table_start = None
@@ -42,6 +61,18 @@ def find_table_points(lines):
 
 
 def main():
+	"""
+	Update the index.md file with the latest contributors data.
+
+	This function retrieves the REPO_NAME environment variable and the
+	CONTRIBUTORS_LOG file path. It then reads the log file and extracts the
+	data from it. The function then reads the index.md file and calculates
+	the table points. If the table does not exist, it creates the table
+	header. The function then iterates over the log data and updates the
+	table with the latest data. Finally, it updates the index.md file with
+	the updated data and prints a success message.
+
+	"""
 
 	# Retrieving Environmental variables
 	REPO_NAME = os.environ.get('REPO_NAME')
@@ -79,22 +110,29 @@ def main():
 
 		# Processing contributors-names
 		contributors_names = details['contributor-name']
-		contributors_names_list = [f'<a href="https://github.com/{name}" title="goto {name} profile">{name}</a>' for name in contributors_names]
+		contributors_names_list = [
+			f'<a href="https://github.com/{name}" title="goto {name} profile">{name}</a>' for name in contributors_names]
 		contributors_names_output = ', '.join(contributors_names_list)
 
 		# Processing pull-requests
 		pull_requests = details['pull-request-number']
-		pull_requests_list = [f'<a href="https://github.com/{REPO_NAME}/pull/{pr}" title="visit pr \#{pr}">{pr}</a>' for pr in pull_requests]
+		pull_requests_list = [
+			f'<a href="https://github.com/{REPO_NAME}/pull/{pr}" title="visit pr \#{pr}">{pr}</a>' for pr in pull_requests]
 		pull_requests_output = ', '.join(pull_requests_list)
 
 		# Processing demo-path
 		demo_path = details['demo-path']
 		if ' ' in demo_path:
 			demo_path = '%20'.join(demo_path.split())
-		demo_path_output = f'<a href="{demo_path}" title="view the result of {title}">/{REPO_NAME}/{title}/</a>' 
+		demo_path_output = f'<a href="{demo_path}" title="view the result of {title}">/{REPO_NAME}/{title}/</a>'
 		if title == 'root' or title == '{init}':
-			demo_path_output = f'<a href="{demo_path}" title="view the result of {title}">/{REPO_NAME}/</a>' 
-		
+			demo_path_output = f'<a href="{demo_path}" title="view the result of {title}">/{REPO_NAME}/</a>'
+		elif title == '{workflows}':
+			demo_path_output = f'<a href="{demo_path}" title="view the result of {title}">/{REPO_NAME}/.github/workflows</a>'
+		elif title == '{scripts}':
+			demo_path_output = f'<a href="{demo_path}" title="view the result of {title}">/{REPO_NAME}/.github/scripts</a>'
+		elif title == '{others}':
+			demo_path_output = f'<a href="{demo_path}" title="view the result of {title}">/{REPO_NAME}/.github</a>'
 
 		# Appending all data together
 		updated_lines.append('\t<tr align="center">\n')
