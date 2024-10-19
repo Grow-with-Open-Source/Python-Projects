@@ -15,7 +15,21 @@ This script requires following environment variables:
   > GitHub action variable: ${{ github.event.pull_request.number }}
 '''
 
+
 def get_project_title(pr_data):
+	"""
+	Determines the project title based on the file paths in the pull request data.
+
+	Args:
+			pr_data (dict): The pull request data containing file paths.
+
+	Returns:
+			str: The project title derived from the directory name in the file path.
+						Returns 'root' if changes are made in the root of the repository.
+						Special cases include '{workflows}', '{scripts}', and '{others}'
+						for certain paths within the '.github' directory.
+
+    """
 
 	# Setting default value
 	project_title = 'root'
@@ -26,16 +40,45 @@ def get_project_title(pr_data):
 			project_title = i["path"]
 			break
 
-	# If we find a directory
-	if project_title != 'root':
-		project_title = project_title.split('/')[0]
+	# changes are made in the root of repo
+	if project_title == 'root':
+		return project_title
+
+	if '.github/workflows' in project_title:
+		project_title = '{workflows}'
+	elif '.github/scripts' in project_title:
+		project_title = '{scripts}'
+	elif '.github' in project_title:
+		project_title = '{others}'
+	else:
+		project_title = project_title.split('/')[0]  # directory name
 
 	return project_title
 
+
 def get_contributor_name(pr_data):
+	"""
+	Retrieves the username of the contributor who made the pull request.
+
+	Args:
+		pr_data (dict): The pull request data containing the author's username.
+
+	Returns:
+		str: The username of the contributor.
+	"""
 	return pr_data["author"]["login"]
 
+
 def get_demo_path(pr_data):
+	"""
+	Retrieves the demo path for the pull request.
+
+	Args:
+		pr_data (dict): The pull request data containing information about the pull request.
+
+	Returns:
+		str: The demo path of the pull request.
+	"""
 
 	# Getting required values
 	REPO_NAME = os.environ.get('REPO_NAME')
@@ -45,8 +88,17 @@ def get_demo_path(pr_data):
 	if PROJECT_NAME == 'root':
 		return f'https://github.com/{REPO_NAME}/'
 
+	url_path = PROJECT_NAME
+
+	# Setting custom path for workflow maintance
+	SPECIAL_CASES = ['{workflows}', '{scripts}', '{others}']
+	if PROJECT_NAME in SPECIAL_CASES:
+		url_path = '.github'
+		if PROJECT_NAME in SPECIAL_CASES[:2]:
+			url_path += f'/{PROJECT_NAME[1:-1]}'
+
 	# Setting default value
-	demo_path = f'https://github.com/{REPO_NAME}/tree/main/{PROJECT_NAME}' 
+	demo_path = f'https://github.com/{REPO_NAME}/tree/main/{url_path}'
 	found_required_path = False
 
 	# Iterating through the "files" list
@@ -56,7 +108,7 @@ def get_demo_path(pr_data):
 			demo_path = path
 			found_required_path = True
 			break
-		elif  path.lower().endswith('index.md') or path.lower().endswith('readme.md'):
+		elif path.lower().endswith('index.md') or path.lower().endswith('readme.md'):
 			demo_path = path
 			found_required_path = True
 
@@ -70,7 +122,26 @@ def get_demo_path(pr_data):
 
 	return demo_path
 
+
 def main():
+	"""
+	Updates the contributors log file after a pull request has been merged.
+
+	This function is to be called in a GitHub Actions workflow after a pull request has been merged.
+	It reads the details of the current pull request from a JSON file, extracts the required information,
+	and updates the contributors log file accordingly.
+
+	The contributors log file is a JSON file that contains information about each contributor, including
+	their name, the number of the pull request they contributed to, and the path to their project.
+
+	The function dumps the data into the log file and outputs a success message upon completion.
+
+	Args:
+		None
+
+	Returns:
+		None
+	"""
 
 	# Setting required file paths
 	CURRENT_PR_DETAILS_PATH = 'pr.json'
@@ -124,6 +195,7 @@ def main():
 
 	# Output message
 	print(f'Successfully {operation_name} the log file')
+
 
 if __name__ == '__main__':
 	main()
