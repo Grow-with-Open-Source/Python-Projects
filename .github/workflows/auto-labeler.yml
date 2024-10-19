@@ -1,0 +1,50 @@
+name: hacktoberfest-labeler
+
+on:
+  pull_request_target:
+    types: [opened, reopened, closed]
+
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  auto-labeler:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for hacktoberfest season
+        id: check-month
+        run: |
+          current_month=$(date +'%m')
+          if [ "$current_month" == "10" ]; then
+            echo "is_october=true" >> $GITHUB_OUTPUT
+          else
+            echo "is_october=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Creating config file
+        env:
+          ACTION: ${{ github.event.action }}
+        run: |
+          touch ./hacktoberfest-labeler.yml
+
+          if [ "$ACTION" != "closed" ]; then
+            echo "hacktoberfest:" > hacktoberfest-labeler.yml
+          else
+            echo "hacktoberfest-accepted:" > hacktoberfest-labeler.yml
+          fi
+          echo "- changed-files:" >> hacktoberfest-labeler.yml
+          echo "  - any-glob-to-any-file: '**'" >> hacktoberfest-labeler.yml
+
+          echo "Created the config file:"
+          echo "------------------------"
+          cat ./hacktoberfest-labeler.yml
+
+      - name: Label the PRs
+        if: steps.check-month.outputs.is_october == 'true' ||
+          github.event.pull_request.merged == 'true' &&
+          contains(github.event.pull_request.labels.*.name, 'hacktoberfest')
+        uses: actions/labeler@v5.0.0
+        with:
+          configuration-path: ./hacktoberfest-labeler.yml

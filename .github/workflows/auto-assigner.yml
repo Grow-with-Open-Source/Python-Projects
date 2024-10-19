@@ -1,0 +1,19 @@
+name: Auto Assign
+
+on:
+  pull_request_target:
+    types: [opened, ready_for_review]
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  auto-assign:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: kentaro-m/auto-assign-action@v1.2.5
+        with:
+          configuration-path: '.github/auto-assign-config.yml'
