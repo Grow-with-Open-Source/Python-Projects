@@ -5,10 +5,7 @@ This project implements real-time 3D pose estimation using MediaPipe and OpenCV.
 ## Table of Contents
 - [Features](#features)
 - [Requirements](#requirements)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Code Overview](#code-overview)
-- [License](#license)
+
 
 ## Features
 - Real-time detection of 3D pose landmarks using MediaPipe.
