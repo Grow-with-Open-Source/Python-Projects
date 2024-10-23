@@ -151,5 +151,14 @@
       "22"
     ],
     "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/.github"
+  },
+  "3d_pose_estimation": {
+    "contributor-name": [
+      "mahipalimkar"
+    ],
+    "pull-request-number": [
+      "23"
+    ],
+    "demo-path": "3d_pose_estimation"
   }
 }
