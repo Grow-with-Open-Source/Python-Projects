@@ -160,5 +160,14 @@
       "23"
     ],
     "demo-path": "3d_pose_estimation"
+  },
+  "Coin-Poison": {
+    "contributor-name": [
+      "niharikah005"
+    ],
+    "pull-request-number": [
+      "24"
+    ],
+    "demo-path": "Coin-Poison"
   }
 }

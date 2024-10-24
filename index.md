@@ -27,6 +27,7 @@ Welcome to **Python-Projects**, your friendly initiation into the world of open-
 | Pomodoro-Timer | [adedayoprcs](https://github.com/adedayoprcs "goto adedayoprcs profile") | [#21](https://github.com/Grow-with-Open-Source/Python-Projects/pull/21 "visit pr \#21") | [/Grow-with-Open-Source/Python-Projects/Pomodoro-Timer/](Pomodoro-Timer "view the result of Pomodoro-Timer") |
 | {others} | [iamwatchdogs](https://github.com/iamwatchdogs "goto iamwatchdogs profile") | [#22](https://github.com/Grow-with-Open-Source/Python-Projects/pull/22 "visit pr \#22") | [/Grow-with-Open-Source/Python-Projects/.github](https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/.github "view the result of {others}") |
 | 3d_pose_estimation | [mahipalimkar](https://github.com/mahipalimkar "goto mahipalimkar profile") | [#23](https://github.com/Grow-with-Open-Source/Python-Projects/pull/23 "visit pr \#23") | [/Grow-with-Open-Source/Python-Projects/3d_pose_estimation/](3d_pose_estimation "view the result of 3d_pose_estimation") |
+| Coin-Poison | [niharikah005](https://github.com/niharikah005 "goto niharikah005 profile") | [#24](https://github.com/Grow-with-Open-Source/Python-Projects/pull/24 "visit pr \#24") | [/Grow-with-Open-Source/Python-Projects/Coin-Poison/](Coin-Poison "view the result of Coin-Poison") |
 <!-- TABLE ENDS -->
 
 </div>
