@@ -24,19 +24,24 @@ jobs:
           fi
 
       - name: Creating config file
-        env:
+        env: 
           ACTION: ${{ github.event.action }}
+          MERGED: ${{ github.event.pull_request.merged }}
         run: |
           touch ./hacktoberfest-labeler.yml
-
-          if [ "$ACTION" != "closed" ]; then
+          echo "ACTION Value = $ACTION\n\n"
+          echo "MERGED Value = $MERGED\n\n"
+          
+          if [ "$ACTION" == "opened" ]; then
             echo "hacktoberfest:" > hacktoberfest-labeler.yml
-          else
+          elif [ "$MERGED" == "true" ]; then
             echo "hacktoberfest-accepted:" > hacktoberfest-labeler.yml
+          else
+            echo "invalid:" > hacktoberfest-labeler.yml
           fi
           echo "- changed-files:" >> hacktoberfest-labeler.yml
           echo "  - any-glob-to-any-file: '**'" >> hacktoberfest-labeler.yml
-
+          
           echo "Created the config file:"
           echo "------------------------"
           cat ./hacktoberfest-labeler.yml
