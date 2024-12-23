@@ -1,4 +1,3 @@
-
 import tkinter as tk
 import time
 from tkinter.font import Font
@@ -25,7 +24,7 @@ This is simply printing out to verify whether it is functioning correctly or not
 '''
 Here I created a instance of TK  class
 '''
-window = Tk()
+window = tk.Tk()
 # creating a title
 window.title("Digital Clock")
 # creating background color
@@ -33,13 +32,13 @@ window.config(bg="black")
 
 font1 = Font(family="Arial", size=90, weight="normal")
 # creating a header using Label Widget
-header = Label(window, text="Time Clock", font=font1, bg="gray", fg="white")
+header = tk.Label(window, text="Time Clock", font=font1, bg="gray", fg="white")
 # using grid() to place the header somewhere comfortable in the gui
 header.grid(row=1, column=2)
 '''
 A clock is being constructed using the Label Widget, which exhibits the current time and is positioned using grid. 
 '''
-clock = Label(window, font=("times", 90, "bold"), bg="blue", fg='white')
+clock = tk.Label(window, font=("times", 90, "bold"), bg="blue", fg='white')
 clock.grid(row=2, column=2, padx=620, pady=250)
 
 '''
