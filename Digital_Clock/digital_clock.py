@@ -1,5 +1,5 @@
 
-from tkinter import *
+import tkinter as tk
 import time
 from tkinter.font import Font
 
