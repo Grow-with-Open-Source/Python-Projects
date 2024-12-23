@@ -169,5 +169,14 @@
       "24"
     ],
     "demo-path": "Coin-Poison"
+  },
+  "Digital_Clock": {
+    "contributor-name": [
+      "DarkSlayer102"
+    ],
+    "pull-request-number": [
+      "25"
+    ],
+    "demo-path": "Digital_Clock"
   }
 }
