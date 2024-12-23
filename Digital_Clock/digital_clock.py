@@ -2,9 +2,6 @@ import tkinter as tk
 import time
 from tkinter.font import Font
 
-'''
-In this project, I have imported all the necessary packages, including time and Tkinter. Tkinter is a built-in library that enables the creation of Graphical User Interfaces (GUIs).
-'''
 
 
 def clocks():
