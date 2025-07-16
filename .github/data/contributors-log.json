@@ -178,5 +178,14 @@
       "25"
     ],
     "demo-path": "Digital_Clock"
+  },
+  "Secure_Password_Manager": {
+    "contributor-name": [
+      "Chaitanya6Nli"
+    ],
+    "pull-request-number": [
+      "29"
+    ],
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Secure_Password_Manager"
   }
 }

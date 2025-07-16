@@ -29,6 +29,7 @@ Welcome to **Python-Projects**, your friendly initiation into the world of open-
 | 3d_pose_estimation | [mahipalimkar](https://github.com/mahipalimkar "goto mahipalimkar profile") | [#23](https://github.com/Grow-with-Open-Source/Python-Projects/pull/23 "visit pr \#23") | [/Grow-with-Open-Source/Python-Projects/3d_pose_estimation/](3d_pose_estimation "view the result of 3d_pose_estimation") |
 | Coin-Poison | [niharikah005](https://github.com/niharikah005 "goto niharikah005 profile") | [#24](https://github.com/Grow-with-Open-Source/Python-Projects/pull/24 "visit pr \#24") | [/Grow-with-Open-Source/Python-Projects/Coin-Poison/](Coin-Poison "view the result of Coin-Poison") |
 | Digital_Clock | [DarkSlayer102](https://github.com/DarkSlayer102 "goto DarkSlayer102 profile") | [#25](https://github.com/Grow-with-Open-Source/Python-Projects/pull/25 "visit pr \#25") | [/Grow-with-Open-Source/Python-Projects/Digital_Clock/](Digital_Clock "view the result of Digital_Clock") |
+| Secure_Password_Manager | [Chaitanya6Nli](https://github.com/Chaitanya6Nli "goto Chaitanya6Nli profile") | [#29](https://github.com/Grow-with-Open-Source/Python-Projects/pull/29 "visit pr \#29") | [/Grow-with-Open-Source/Python-Projects/Secure_Password_Manager/](https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Secure_Password_Manager "view the result of Secure_Password_Manager") |
 <!-- TABLE ENDS -->
 
 </div>
