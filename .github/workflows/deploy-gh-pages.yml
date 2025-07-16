@@ -34,21 +34,12 @@ jobs:
           fi
         env:
           REPO_NAME: ${{ github.repository }}
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
-        with:
-          ruby-version: '3.1'
-          bundler-cache: true
-          cache-version: 0
       - name: Setup Pages
-        id: pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-        env:
-          JEKYLL_ENV: production
+        uses: actions/jekyll-build-pages@v1.0.13
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v3.0.1
 
   # Deployment job
   deploy:
@@ -60,4 +51,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4.0.5
