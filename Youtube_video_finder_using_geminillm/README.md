@@ -3,11 +3,11 @@
 ````markdown
 # YouTube Relevance Finder with Gemini AI
 
-This Python script searches YouTube for recent videos based on a user query and ranks them by relevance using Google's Gemini AI model. It filters results by duration and recency, scores video titles for relevance, and returns the top-ranked videos.
+This Python script searches YouTube for recent videos based on a user query and ranks them by relevance using Google's Gemini AI model and Youtube API. It filters results by duration and recency, scores video titles for relevance, and returns the top-ranked videos.
 
 ## 🔍 Features
 
-- Searches YouTube for videos from the past 14 days
+- Searches YouTube for videos from the past 14 days using Youtube API which is publicly available.
 - Filters videos by duration (4–20 minutes)
 - Uses Gemini AI to score title relevance to a query
 - Prints the top relevant video links with scores and metadata
