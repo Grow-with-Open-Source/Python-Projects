@@ -187,5 +187,14 @@
       "29"
     ],
     "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Secure_Password_Manager"
+  },
+  "Youtube_video_finder_using_geminillm": {
+    "contributor-name": [
+      "veerababu1729"
+    ],
+    "pull-request-number": [
+      "32"
+    ],
+    "demo-path": "Youtube_video_finder_using_geminillm"
   }
 }

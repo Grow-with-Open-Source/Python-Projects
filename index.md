@@ -30,6 +30,7 @@ Welcome to **Python-Projects**, your friendly initiation into the world of open-
 | Coin-Poison | [niharikah005](https://github.com/niharikah005 "goto niharikah005 profile") | [#24](https://github.com/Grow-with-Open-Source/Python-Projects/pull/24 "visit pr \#24") | [/Grow-with-Open-Source/Python-Projects/Coin-Poison/](Coin-Poison "view the result of Coin-Poison") |
 | Digital_Clock | [DarkSlayer102](https://github.com/DarkSlayer102 "goto DarkSlayer102 profile") | [#25](https://github.com/Grow-with-Open-Source/Python-Projects/pull/25 "visit pr \#25") | [/Grow-with-Open-Source/Python-Projects/Digital_Clock/](Digital_Clock "view the result of Digital_Clock") |
 | Secure_Password_Manager | [Chaitanya6Nli](https://github.com/Chaitanya6Nli "goto Chaitanya6Nli profile") | [#29](https://github.com/Grow-with-Open-Source/Python-Projects/pull/29 "visit pr \#29") | [/Grow-with-Open-Source/Python-Projects/Secure_Password_Manager/](https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Secure_Password_Manager "view the result of Secure_Password_Manager") |
+| Youtube_video_finder_using_geminillm | [veerababu1729](https://github.com/veerababu1729 "goto veerababu1729 profile") | [#32](https://github.com/Grow-with-Open-Source/Python-Projects/pull/32 "visit pr \#32") | [/Grow-with-Open-Source/Python-Projects/Youtube_video_finder_using_geminillm/](Youtube_video_finder_using_geminillm "view the result of Youtube_video_finder_using_geminillm") |
 <!-- TABLE ENDS -->
 
 </div>
