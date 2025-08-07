@@ -57,6 +57,3 @@ You'll be prompted to enter a search query. The script will then display a list 
 * Make sure you have valid API keys for both YouTube Data API v3 and Google Gemini.
 * The script currently uses the `gemini-1.5-flash-latest` model.
 
-## 📃 License
-
-Open source – feel free to use and modify
