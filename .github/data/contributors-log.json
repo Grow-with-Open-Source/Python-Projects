@@ -196,5 +196,14 @@
       "32"
     ],
     "demo-path": "Youtube_video_finder_using_geminillm"
+  },
+  "{workflows}": {
+    "contributor-name": [
+      "iamwatchdogs"
+    ],
+    "pull-request-number": [
+      "36"
+    ],
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/.github/workflows"
   }
 }
