@@ -214,5 +214,14 @@
       "35"
     ],
     "demo-path": "Temp-Cleaner"
+  },
+  "Gesture_Volume_Control": {
+    "contributor-name": [
+      "10mudassir007"
+    ],
+    "pull-request-number": [
+      "34"
+    ],
+    "demo-path": "Gesture_Volume_Control"
   }
 }

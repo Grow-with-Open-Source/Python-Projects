@@ -33,6 +33,7 @@ Welcome to **Python-Projects**, your friendly initiation into the world of open-
 | Youtube_video_finder_using_geminillm | [veerababu1729](https://github.com/veerababu1729 "goto veerababu1729 profile") | [#32](https://github.com/Grow-with-Open-Source/Python-Projects/pull/32 "visit pr \#32") | [/Grow-with-Open-Source/Python-Projects/Youtube_video_finder_using_geminillm/](Youtube_video_finder_using_geminillm "view the result of Youtube_video_finder_using_geminillm") |
 | {workflows} | [iamwatchdogs](https://github.com/iamwatchdogs "goto iamwatchdogs profile") | [#36](https://github.com/Grow-with-Open-Source/Python-Projects/pull/36 "visit pr \#36") | [/Grow-with-Open-Source/Python-Projects/.github/workflows](https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/.github/workflows "view the result of {workflows}") |
 | Temp-Cleaner | [iamwatchdogs](https://github.com/iamwatchdogs "goto iamwatchdogs profile") | [#35](https://github.com/Grow-with-Open-Source/Python-Projects/pull/35 "visit pr \#35") | [/Grow-with-Open-Source/Python-Projects/Temp-Cleaner/](Temp-Cleaner "view the result of Temp-Cleaner") |
+| Gesture_Volume_Control | [10mudassir007](https://github.com/10mudassir007 "goto 10mudassir007 profile") | [#34](https://github.com/Grow-with-Open-Source/Python-Projects/pull/34 "visit pr \#34") | [/Grow-with-Open-Source/Python-Projects/Gesture_Volume_Control/](Gesture_Volume_Control "view the result of Gesture_Volume_Control") |
 <!-- TABLE ENDS -->
 
 </div>
