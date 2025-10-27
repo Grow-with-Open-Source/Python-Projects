@@ -223,5 +223,14 @@
       "34"
     ],
     "demo-path": "Gesture_Volume_Control"
+  },
+  "Password-Checker": {
+    "contributor-name": [
+      "iamwatchdogs"
+    ],
+    "pull-request-number": [
+      "37"
+    ],
+    "demo-path": "Password-Checker"
   }
 }

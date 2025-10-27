@@ -34,6 +34,7 @@ Welcome to **Python-Projects**, your friendly initiation into the world of open-
 | {workflows} | [iamwatchdogs](https://github.com/iamwatchdogs "goto iamwatchdogs profile") | [#36](https://github.com/Grow-with-Open-Source/Python-Projects/pull/36 "visit pr \#36") | [/Grow-with-Open-Source/Python-Projects/.github/workflows](https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/.github/workflows "view the result of {workflows}") |
 | Temp-Cleaner | [iamwatchdogs](https://github.com/iamwatchdogs "goto iamwatchdogs profile") | [#35](https://github.com/Grow-with-Open-Source/Python-Projects/pull/35 "visit pr \#35") | [/Grow-with-Open-Source/Python-Projects/Temp-Cleaner/](Temp-Cleaner "view the result of Temp-Cleaner") |
 | Gesture_Volume_Control | [10mudassir007](https://github.com/10mudassir007 "goto 10mudassir007 profile") | [#34](https://github.com/Grow-with-Open-Source/Python-Projects/pull/34 "visit pr \#34") | [/Grow-with-Open-Source/Python-Projects/Gesture_Volume_Control/](Gesture_Volume_Control "view the result of Gesture_Volume_Control") |
+| Password-Checker | [iamwatchdogs](https://github.com/iamwatchdogs "goto iamwatchdogs profile") | [#37](https://github.com/Grow-with-Open-Source/Python-Projects/pull/37 "visit pr \#37") | [/Grow-with-Open-Source/Python-Projects/Password-Checker/](Password-Checker "view the result of Password-Checker") |
 <!-- TABLE ENDS -->
 
 </div>
