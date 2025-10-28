@@ -3,50 +3,67 @@ name: lint-python-code
 on:
   pull_request:
     branches: [main]
-    paths: ['**.py',  '**.ipynb']
+    paths: ["**.py", "**.ipynb"]
   workflow_call:
 
 jobs:
   python-linter:
     runs-on: ubuntu-latest
     steps:
-    - name: Checking out repo
-      uses: actions/checkout@v4.1.0
+      - name: Checking out repo
+        uses: actions/checkout@v4.1.0
 
-    - name: Set up Python
-      uses: actions/setup-python@v6.0.0
-      with:
-        python-version: '3.12'
+      - name: Set up Python
+        uses: actions/setup-python@v6.0.0
+        with:
+          python-version: "3.12"
 
-    - name: Install dependencies
-      run: |
-        pip install flake8
-        pip install pynblint
+      - name: Install dependencies
+        run: |
+          pip install flake8 nbqa pylint
 
-    - name: Lint Python Code
-      run: |
-        flake8 . --select=E901,E999,F821,F822,F823 --exclude=__init__.py
-      env:
-        FLAKE8_OPTIONS: "--ignore=E203,W503"
+      - name: Lint Python Code
+        run: |
+          flake8 . --select=E901,E999,F821,F822,F823 --exclude=__init__.py
+        env:
+          FLAKE8_OPTIONS: "--ignore=E203,W503"
 
-    - name: Getting PR details
-      run: |
-        touch pr.json
-        gh pr view $PR_NUMBER --json files > pr.json
-        touch pr.json
-      env:
-        PR_NUMBER: ${{ github.event.pull_request.number }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Getting PR details
+        run: |
+          touch pr.json
+          gh pr view $PR_NUMBER --json files > pr.json
+          touch pr.json
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Linting all Jupyter Notebook files
-      uses: jannekem/run-python-script-action@v1.6
-      with:
-        script: |
-          import os
-          import json
-          with open('pr.json','r') as json_file:
-            data = json.load(json_file)
-            for file in data["files"]:
-              path = file["path"]
-              if os.path.exists(path):
-                os.system(f"pynblint {path}")
+      - name: Linting all Jupyter Notebook files
+        uses: jannekem/run-python-script-action@v1.7
+        with:
+          script: |
+            import os
+            import sys
+            import json
+            import subprocess
+
+            with open('pr.json', 'r') as pr_details:
+              files = [
+                f['path'] 
+                for f in json.load(pr_details)['files'] 
+                if f['path'].endswith('.ipynb') and os.path.exists(f['path'])
+              ]
+
+            exit_codes = []
+            for path in files:
+                cmd = ['nbqa', 'pylint', *os.environ['LINTER_CONFIG'].split(), 
+                      path, *os.environ['NBQA_CONFIG'].split()]
+                result = subprocess.run(cmd, capture_output=True, text=True)
+                print(result.stdout)
+                if result.stderr:
+                    print(result.stderr, file=sys.stderr)
+                exit_codes.append(result.returncode)
+                
+            sys.exit(int(any(exit_codes)))
+        env:
+          LINTER_CONFIG: "--disable=C,import-error,no-name-in-module --fail-under=8 --verbose --output-format=colorized"
+          NBQA_CONFIG: "--nbqa-dont-skip-bad-cells"
