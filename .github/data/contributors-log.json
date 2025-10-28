@@ -202,7 +202,8 @@
       "iamwatchdogs"
     ],
     "pull-request-number": [
-      "36"
+      "36",
+      "39"
     ],
     "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/.github/workflows"
   },
