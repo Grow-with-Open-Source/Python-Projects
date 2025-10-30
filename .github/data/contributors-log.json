@@ -233,5 +233,14 @@
       "37"
     ],
     "demo-path": "Password-Checker"
+  },
+  "Temperature_Converter": {
+    "contributor-name": [
+      "omprakash0702"
+    ],
+    "pull-request-number": [
+      "40"
+    ],
+    "demo-path": "Temperature_Converter"
   }
 }
