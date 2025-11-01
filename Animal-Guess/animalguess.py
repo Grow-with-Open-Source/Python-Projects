@@ -1,25 +1,49 @@
+import random
+
 def check_guess(guess, answer):
-    global score
-    still_guessing = True
+    """Check user's guess and return True if correct."""
     attempt = 0
-    while still_guessing and attempt < 3:
+    while attempt < 3:
         if guess.lower() == answer.lower():
-            print("Correct Answer")
-            score = score + 1
-            still_guessing = False
+            print("✅ Correct Answer!\n")
+            return True
         else:
-            if attempt < 2:
-                guess = input("Sorry Wrong Answer, try again")
-            attempt = attempt + 1
-    if attempt == 3:
-        print("The Correct answer is ",answer )
-    
-score = 0
-print("Guess the Animal")
-guess1 = input("Which bear lives at the North Pole? ")
-check_guess(guess1, "polar bear")
-guess2 = input("Which is the fastest land animal? ")
-check_guess(guess2, "Cheetah")
-guess3 = input("Which is the larget animal? ")
-check_guess(guess3, "Blue Whale")
-print("Your Score is "+ str(score))
+            attempt += 1
+            if attempt < 3:
+                guess = input("❌ Wrong! Try again: ")
+    print(f"The correct answer is: {answer}\n")
+    return False
+
+
+def main():
+    print("🐾 Welcome to the Animal Guessing Game! 🐾")
+    print("You have 3 attempts for each question.\n")
+
+    questions = {
+        "Which bear lives at the North Pole?": "polar bear",
+        "Which is the fastest land animal?": "cheetah",
+        "Which is the largest animal?": "blue whale",
+        "Which animal is known as the king of the jungle?": "lion",
+        "Which animal can sleep standing up?": "horse"
+    }
+
+    score = 0
+    # Randomize question order
+    for question, answer in random.sample(list(questions.items()), 3):
+        guess = input(question + " ")
+        if check_guess(guess, answer):
+            score += 1
+
+    print(f"🎯 Your final score is: {score}/{len(questions)}")
+
+    # Option to play again
+    replay = input("\nDo you want to play again? (yes/no): ")
+    if replay.lower().startswith('y'):
+        print("\nRestarting game...\n")
+        main()
+    else:
+        print("Thanks for playing! 🦋")
+
+
+if __name__ == "__main__":
+    main()
