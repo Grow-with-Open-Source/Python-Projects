@@ -172,10 +172,12 @@
   },
   "Digital_Clock": {
     "contributor-name": [
-      "DarkSlayer102"
+      "DarkSlayer102",
+      "swati-londhe"
     ],
     "pull-request-number": [
-      "25"
+      "25",
+      "41"
     ],
     "demo-path": "Digital_Clock"
   },
