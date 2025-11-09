@@ -118,10 +118,12 @@
   },
   "Number-Guess": {
     "contributor-name": [
-      "adedayoprcs"
+      "adedayoprcs",
+      "sheylaghost"
     ],
     "pull-request-number": [
-      "19"
+      "19",
+      "43"
     ],
     "demo-path": "Number-Guess"
   },
