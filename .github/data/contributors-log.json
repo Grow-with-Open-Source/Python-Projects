@@ -246,5 +246,14 @@
       "40"
     ],
     "demo-path": "Temperature_Converter"
+  },
+  "Image_watermark_Adder": {
+    "contributor-name": [
+      "ramanuj-droid"
+    ],
+    "pull-request-number": [
+      "45"
+    ],
+    "demo-path": "Image_watermark_Adder"
   }
 }
