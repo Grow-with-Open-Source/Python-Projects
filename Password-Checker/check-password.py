@@ -1,7 +1,5 @@
 #!/usr/bin/env python
-import re
-import sys
-import random
+import re, sys, random, termios, tty
 from getpass import getpass
 
 # ANSI escape codes for colors
@@ -20,7 +18,7 @@ COMMON_SUBSTITUTIONS = {
 }
 
 COMMON_WORDS = {
-    'adjectives': ['Happy', 'Clever', 'Swift', 'Brave', 'Bright'],
+    'adjectives': ['Happy', 'Clever', 'Swift', 'Brave', 'Bright', 'Cool'],
     'nouns': ['Tiger', 'River', 'Mountain', 'Storm', 'Star'],
     'numbers': ['365', '42', '777', '314', '999'],
     'separators': ['_', '.', '#', '*', '@']
@@ -33,6 +31,33 @@ PATTERNS = {
     'special': re.compile(r'[!@#$%^&*(),.?":{}|<>]')
 }
 
+def passwd_enter(prompt_part, mask="x"):
+   prompt = f"\nEnter the Password to {prompt_part}: "
+   sys.stdout.write(prompt)
+   sys.stdout.flush()
+   password = ""
+   fd = sys.stdin.fileno()
+   old_settings = termios.tcgetattr(fd)
+   try:
+       tty.setraw(fd)
+       while True:
+           ch = sys.stdin.read(1)
+           if ch in ('\r', '\n'):
+               sys.stdout.write('\r\n')
+               sys.stdout.flush()
+               break
+           elif ch == '\x7f':  # backspace
+               if password:
+                   password = password[:-1]
+                   sys.stdout.write('\b \b')
+                   sys.stdout.flush()
+           else:
+               password += ch
+               sys.stdout.write(mask)
+               sys.stdout.flush()
+   finally:
+       termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
+   return password
 
 def format_to_header(
         msg: str,
@@ -168,8 +193,9 @@ def suggest_better_password(password):
 
     # Smart character substitutions (maintain readability)
     smart_subs = {
-        'a': '@', 'e': '3', 'i': '!', 'o': '0', 's': '$',
-        'ate': '8', 'to': '2', 'for': '4'
+        'a': '@', 'e': '€', 'i': '!', 'o': '0', 's': '$',
+        'ate': '8', 'to': '2', 'for': '4', 'and': '&',
+        'b': 'be', 'u': 'you' 
     }
 
     # Apply substitutions intelligently
@@ -212,7 +238,7 @@ def input_handler():
     print("For enhanced security, your input will be hidden.")
     print("Hence, you may not see the characters as you type.")
     try:
-        password = getpass("\nEnter password to check: ")
+        password = passwd_enter("check")
     except KeyboardInterrupt:
         print("\nExiting...")
         sys.exit(0)
