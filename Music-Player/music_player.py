@@ -53,9 +53,21 @@ def add_to_playlist(filename):
     playlist.insert(index, filename_path)
     index += 1
 
+def clear_playlist():
+    global playlist
+    stop_music()
+    # Clear the internal playlist list
+    playlist.clear()
+    # Clear the Listbox GUI element
+    playlistbox.delete(0, END)
+    statusbar['text'] = "Playlist Cleared"
+
+
 
 menubar.add_cascade(label="File", menu=subMenu)
 subMenu.add_command(label="Open", command=browse_file)
+subMenu.add_command(label="Clear Playlist", command=clear_playlist)
+subMenu.add_separator()
 subMenu.add_command(label="Exit", command=root.destroy)
 
 
