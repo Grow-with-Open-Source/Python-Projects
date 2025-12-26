@@ -37,6 +37,7 @@ Welcome to **Python-Projects**, your friendly initiation into the world of open-
 | Password-Checker | [iamwatchdogs](https://github.com/iamwatchdogs "goto iamwatchdogs profile") | [#37](https://github.com/Grow-with-Open-Source/Python-Projects/pull/37 "visit pr \#37") | [/Grow-with-Open-Source/Python-Projects/Password-Checker/](Password-Checker "view the result of Password-Checker") |
 | Temperature_Converter | [omprakash0702](https://github.com/omprakash0702 "goto omprakash0702 profile") | [#40](https://github.com/Grow-with-Open-Source/Python-Projects/pull/40 "visit pr \#40") | [/Grow-with-Open-Source/Python-Projects/Temperature_Converter/](Temperature_Converter "view the result of Temperature_Converter") |
 | Image_watermark_Adder | [ramanuj-droid](https://github.com/ramanuj-droid "goto ramanuj-droid profile") | [#45](https://github.com/Grow-with-Open-Source/Python-Projects/pull/45 "visit pr \#45") | [/Grow-with-Open-Source/Python-Projects/Image_watermark_Adder/](Image_watermark_Adder "view the result of Image_watermark_Adder") |
+| Binary-Gene-Classifier-Model | [venkamita](https://github.com/venkamita "goto venkamita profile") | [#49](https://github.com/Grow-with-Open-Source/Python-Projects/pull/49 "visit pr \#49") | [/Grow-with-Open-Source/Python-Projects/Binary-Gene-Classifier-Model/](Binary-Gene-Classifier-Model "view the result of Binary-Gene-Classifier-Model") |
 <!-- TABLE ENDS -->
 
 </div>
