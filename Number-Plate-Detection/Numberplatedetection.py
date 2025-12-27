@@ -2,7 +2,6 @@ import cv2
 import os
 import time
 
-# Use OpenCV's built-in Haar cascade (NO local XML file)
 cascade_path = cv2.data.haarcascades + "haarcascade_russian_plate_number.xml"
 plate_cascade = cv2.CascadeClassifier(cascade_path)
 
@@ -12,14 +11,13 @@ if plate_cascade.empty():
 # Output directory
 os.makedirs("plates", exist_ok=True)
 
-# Use webcam by default (NO mp4 file in repo)
 cap = cv2.VideoCapture(0)
 if not cap.isOpened():
     raise IOError("Cannot open webcam")
 
 plate_count = 0
 last_save_time = 0
-save_delay = 0.5  # seconds
+save_delay = 0.5 
 
 while True:
     ret, frame = cap.read()
