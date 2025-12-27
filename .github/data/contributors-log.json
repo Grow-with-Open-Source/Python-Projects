@@ -257,5 +257,14 @@
       "45"
     ],
     "demo-path": "Image_watermark_Adder"
+  },
+  "Binary-Gene-Classifier-Model": {
+    "contributor-name": [
+      "venkamita"
+    ],
+    "pull-request-number": [
+      "49"
+    ],
+    "demo-path": "Binary-Gene-Classifier-Model"
   }
 }
