@@ -31,8 +31,10 @@ It uses classical image processing techniques and OpenCV’s **built-in Haar Cas
 
 ## 📁 Project Structure
 
+```
 Number-Plate-Detection/
 │
 ├── Numberplatedetection.py   # Main script
-└── README.md                # Project documentation
+└── README.md                 # Project documentation
+```
 
