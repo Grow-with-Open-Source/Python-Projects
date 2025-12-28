@@ -37,10 +37,12 @@
   },
   "Animal-Guess": {
     "contributor-name": [
-      "ShashiNova"
+      "ShashiNova",
+      "Achi-Vyshnavi"
     ],
     "pull-request-number": [
-      "8"
+      "8",
+      "56"
     ],
     "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Animal-Guess"
   },
@@ -121,11 +123,13 @@
   "Number-Guess": {
     "contributor-name": [
       "adedayoprcs",
-      "sheylaghost"
+      "sheylaghost",
+      "Achi-Vyshnavi"
     ],
     "pull-request-number": [
       "19",
-      "43"
+      "43",
+      "57"
     ],
     "demo-path": "Number-Guess"
   },
@@ -167,10 +171,12 @@
   },
   "Coin-Poison": {
     "contributor-name": [
-      "niharikah005"
+      "niharikah005",
+      "Achi-Vyshnavi"
     ],
     "pull-request-number": [
-      "24"
+      "24",
+      "55"
     ],
     "demo-path": "Coin-Poison"
   },
@@ -266,5 +272,23 @@
       "49"
     ],
     "demo-path": "Binary-Gene-Classifier-Model"
+  },
+  "Auto-Clicker": {
+    "contributor-name": [
+      "BasselDar"
+    ],
+    "pull-request-number": [
+      "54"
+    ],
+    "demo-path": "Auto-Clicker"
+  },
+  "Number-Plate-Detection": {
+    "contributor-name": [
+      "iamdevdhanush"
+    ],
+    "pull-request-number": [
+      "58"
+    ],
+    "demo-path": "Number-Plate-Detection"
   }
 }
