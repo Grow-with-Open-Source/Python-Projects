@@ -5,18 +5,21 @@ on:
     types: [closed]
     branches: [main]
 
-env:
-  REPO_NAME: ${{ github.repository }}
-  PR_NUMBER: ${{ github.event.pull_request.number }}
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 jobs:
   update-by-pr:
-    if: ${{ github.event.pull_request.title != 'init' && github.event.pull_request.merged == true }}
+    if: |
+      github.event.pull_request.merged == true &&
+      !contains(github.event.pull_request.title, 'maintenance') &&
+      !contains(github.event.pull_request.title, 'Maintenance')
+
     runs-on: ubuntu-latest
 
     permissions:
       contents: write
+
+    env:
+      REPO_NAME: ${{ github.repository }}
+      PR_NUMBER: ${{ github.event.pull_request.number }}
 
     steps:
       - name: Checking out the repo
@@ -24,11 +27,17 @@ jobs:
 
       - name: Setup Python
         uses: actions/setup-python@v4.7.1
+        with:
+          python-version: 3.12
 
       - name: Getting PR details
         run: |
           touch pr.json
           gh pr view $PR_NUMBER --json author,url,files > pr.json
+          cat pr.json
+
+      - name: Pull any new changes
+        run: git pull origin main
 
       - name: Updating log file
         run: |
@@ -37,12 +46,12 @@ jobs:
             echo "Create `.github/data` directory"
           fi
           python .github/scripts/update_contributors_log.py
-          cat .github/data/contributors-log.json
+          git diff .github/data/contributors-log.json
 
       - name: Updating index.md file
         run: |
           python .github/scripts/update_index_md.py
-          cat index.md
+          git diff index.md
 
       - name: Remove unwanted files
         run: rm pr.json
@@ -50,14 +59,23 @@ jobs:
       - name: Commit and Push
         run: |
           if [ "$(git status | grep 'Changes not staged\|Untracked files')" ]; then
+            echo "::group::Printing All Diffs"
             git diff
+            echo "::endgroup::"
+
+            echo "::group::Configuring GitHub Action as author"
             git config --global user.email "actions@github.com"
             git config --global user.name "GitHub Actions"
+            git config --list | cat
+            echo "::endgroup::"
+
+            echo "::group::Adding and Pushing Changes"
             git add .
             git commit -m "Updated Contributors Details"
             git push origin main
             echo "Pushed the update successfully"
+            echo "::endgroup::"
           else
-            echo "Nothing to push"
+            echo "::error::No Changes detected!"
             exit 1
           fi
