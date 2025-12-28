@@ -115,7 +115,7 @@ def main():
 		# Processing pull-requests
 		pull_requests = details['pull-request-number']
 		pull_requests_list = [
-			f'[#{pr}](https://github.com/{REPO_NAME}/pull/{pr} "visit pr \#{pr}")' for pr in pull_requests]
+			f'[#{pr}](https://github.com/{REPO_NAME}/pull/{pr} "visit pr #{pr}")' for pr in pull_requests]
 		pull_requests_output = ', '.join(pull_requests_list)
 
 		# Processing demo-path

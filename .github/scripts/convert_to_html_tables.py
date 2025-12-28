@@ -117,7 +117,7 @@ def main():
 		# Processing pull-requests
 		pull_requests = details['pull-request-number']
 		pull_requests_list = [
-			f'<a href="https://github.com/{REPO_NAME}/pull/{pr}" title="visit pr \#{pr}">{pr}</a>' for pr in pull_requests]
+			f'<a href="https://github.com/{REPO_NAME}/pull/{pr}" title="visit pr #{pr}">{pr}</a>' for pr in pull_requests]
 		pull_requests_output = ', '.join(pull_requests_list)
 
 		# Processing demo-path
