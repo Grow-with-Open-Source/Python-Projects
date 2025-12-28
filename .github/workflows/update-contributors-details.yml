@@ -35,6 +35,8 @@ jobs:
           touch pr.json
           gh pr view $PR_NUMBER --json author,url,files > pr.json
           cat pr.json
+        env:
+          GH_TOKEN: ${{ github.token }}
 
       - name: Pull any new changes
         run: git pull origin main
