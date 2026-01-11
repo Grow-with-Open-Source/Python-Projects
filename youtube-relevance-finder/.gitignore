@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Environment variables
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs
+*.log
