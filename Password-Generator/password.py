@@ -42,7 +42,7 @@ def save(passwords: list) -> None:
     except OSError as e:
         print(f"Error saving passwords: {e}")
 
-def main():
+def main() -> None:
     try:
         length: int = int(input("Enter the length of the password: "))
         count: int = int(input("Enter the number of passwords to generate: "))
