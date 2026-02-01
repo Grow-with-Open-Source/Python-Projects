@@ -5,8 +5,13 @@ import re
 from typing import Dict
 from datetime import datetime, timedelta, timezone
 from googleapiclient.discovery import build
-import google.generativeai as genai
+from google import genai
+from dotenv import load_dotenv
+import isodate
 
+
+# Load keys from .env file
+load_dotenv()
 
 # ——— ENV variables ———
 YT_API_KEY = os.environ.get('YT_API_KEY')
@@ -15,49 +20,51 @@ GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
 # ——— CONSTANTS ———
 SERVICE_TYPE = 'youtube'
 SERVICE_VERSION = 'v3'
-MODEL_NAME = 'gemini-1.5-flash-latest'
+MODEL_NAME = 'gemini-1.5-flash'
 
 DEFAULT_MAX_API_CALLS = 5
 DEFAULT_MAX_RESULTS_PER_PAGE = 50
-DEFAULT_MAX_RESULTS = 20
+DEFAULT_MAX_RESULTS = 5
 DEFAULT_MIN_VIDEO_DURATION_MINUTES = 10
 DEFAULT_MAX_VIDEO_DURATION_MINUTES = 60
 DEFAULT_NO_OF_PREV_DAYS = 14
 
-DEFAULT_MAX_RESULTS = 5
 REGEX_PATTERN = r'\b(10|[1-9](\.\d+)?|0?\.\d+)\b'
 DEFAULT_SCORE = 5.0
 
 
 class TimeUtils:
+    """
+    Utility class for handling time-related calculations for YouTube videos.
+    """
     @staticmethod
     def get_timestamp_n_days_from_now(days: int) -> str:
         """
-        Get the timestamp for a date n days ago in ISO 8601 format.
+        Get the timestamp for a date N days ago in ISO 8601 format.
         """
         date_before_n_days = datetime.now(timezone.utc) - timedelta(days=days)
-        formatted_date = date_before_n_days \
-            .isoformat('T') \
-            .replace('+00:00', 'Z')
+        formatted_date = date_before_n_days.isoformat('T').replace('+00:00', 'Z')
         return formatted_date
 
     @staticmethod
     def is_duration_in_mins(duration: str) -> bool:
         """
-        Check if the duration is in minutes.
+        Return True if the duration string contains hours or does not contain minutes.
+        Used to filter out videos that are too short or too long.
         """
         return 'H' in duration or 'M' not in duration
 
     @staticmethod
     def derive_total_seconds_from_duration(duration: str) -> int:
         """
-        Derive total seconds from duration (ISO 8601 format, e.g. "PT5M30S").
+        Convert ISO 8601 duration (e.g., 'PT5M30S') to total seconds.
         """
-        parts = duration.split('M')
-        mins = int(parts[0])
-        secs = parts[1].replace('S', '') if len(parts) > 1 else '0'
-        seconds = int(secs) if secs else 0
-        total_seconds = mins * 60 + seconds
+        import isodate
+        try:
+            total_seconds = int(isodate.parse_duration(duration).total_seconds())
+        except Exception as e:
+            print(f"Failed to parse duration {duration}: {e}")
+            total_seconds = 0
         return total_seconds
 
     @staticmethod
@@ -67,7 +74,7 @@ class TimeUtils:
             min_duration: int = DEFAULT_MIN_VIDEO_DURATION_MINUTES,
             max_duration: int = DEFAULT_MAX_VIDEO_DURATION_MINUTES) -> bool:
         """
-        Check if the video duration is within the specified range in minutes.
+        Return True if the video duration is within min and max minutes.
         """
         return min_duration * 60 <= total_seconds <= max_duration * 60
 
@@ -100,11 +107,10 @@ class VideoDetailsExtractor:
         self.__max_pages = max_pages
 
         self.query = query
-        self.__targeted_date = TimeUtils \
-            .get_timestamp_n_days_from_now(no_prev_days)
-        self.__search_response = self.get_new_search_response()
+        self.__targeted_date = TimeUtils.get_timestamp_n_days_from_now(no_prev_days)
         self.__max_results = max_results
 
+        self.__search_response = self.get_new_search_response()
         self.scan_videos()
 
     def get_new_search_response(self) -> dict:
@@ -132,7 +138,7 @@ class VideoDetailsExtractor:
 
     def get_video_ids_from_search_response(self) -> list:
         """
-        Extract video IDs from the search response.
+        Extract video IDs from the current search response.
         """
         items_list = self.__search_response.get('items', [])
         return [item['id']['videoId'] for item in items_list]
@@ -140,34 +146,33 @@ class VideoDetailsExtractor:
     def filter_videos(self) -> None:
         """
         Filter videos based on duration and recency.
-        This method processes the search response to filter videos that meet the criteria.
+        Adds filtered video details to self.__filtered_videos.
         """
         video_ids = self.get_video_ids_from_search_response()
-
         if not video_ids:
             print("No video IDs found in the search response.")
             return
 
+        # Fetch full video details
         details_config = {
             "part": "contentDetails,snippet",
             "id": ",".join(video_ids)
         }
 
-        details = VideoDetailsExtractor.__platform_conn \
-            .videos() \
-            .list(**details_config) \
-            .execute()
+        details = VideoDetailsExtractor.__platform_conn.videos().list(**details_config).execute()
 
         for item in details.get('items', []):
             try:
-                duration = item['contentDetails']['duration'].replace('PT', '')
-
+                duration = item['contentDetails']['duration']
+                
+                # Skip videos with hours or missing minutes
                 if TimeUtils.is_duration_in_mins(duration):
                     continue
 
-                total_seconds = TimeUtils \
-                    .derive_total_seconds_from_duration(duration)
+                # Convert duration to total seconds
+                total_seconds = TimeUtils.derive_total_seconds_from_duration(duration)
 
+                # Check if video is in the desired range
                 if TimeUtils.is_video_duration_in_range(total_seconds):
                     video_details = {
                         'id': item['id'],
@@ -177,15 +182,15 @@ class VideoDetailsExtractor:
                     }
                     self.__filtered_videos.append(video_details)
 
-                    if len(self.__filtered_videos) >= DEFAULT_MAX_RESULTS:
+                    # Stop if we reach the max results
+                    if len(self.__filtered_videos) >= self.__max_results:
                         break
 
             except Exception as e:
                 print(f"Error processing video {item.get('id', 'N/A')}: {e}")
                 continue
 
-        print(
-            f"Filtered {len(self.__filtered_videos)} videos based on criteria.")
+        print(f"Filtered {len(self.__filtered_videos)} videos based on criteria.")
 
     def has_filtered_videos_reached_limit(self) -> bool:
         """
@@ -197,14 +202,13 @@ class VideoDetailsExtractor:
         """
         Check if the maximum number of API calls has been reached.
         """
-        return self.__page_count >= self.__max_pages
+        return self.__page_count < self.__max_pages
 
     def update_next_page_token(self) -> None:
         """
         Update the next page token based on the search response.
         """
-        self.__next_page_token = \
-            self.__search_response.get('nextPageToken', None)
+        self.__next_page_token = self.__search_response.get('nextPageToken', None)
 
     def scan_videos(self) -> None:
         """
@@ -212,13 +216,17 @@ class VideoDetailsExtractor:
         This method keeps searching until it finds enough videos that meet the criteria
         or exhausts the search results.
         """
+        # NOTE:
+        # First search page is fetched but not filtered due to original pagination logic.
+        # This is intentional to keep parity with the upstream source code.
+
         while self.has_filtered_videos_reached_limit() and self.has_page_token_reached_limit():
             self.__search_response = self.get_new_search_response()
             self.filter_videos()
             self.update_next_page_token()
             if not self.__next_page_token:
                 break
-
+    
     def get_video_details(self) -> list:
         """
         Fetch video details for a list of filtered video based that were previously computed.
@@ -241,8 +249,13 @@ class GenModel:
         Initialize the Gemini model if it hasn't been initialized yet.
         """
         if cls._model is None:
-            genai.configure(api_key=GEMINI_API_KEY)
-            cls._model = genai.GenerativeModel(MODEL_NAME)
+            #cls._client = genai.Client(api_key=GEMINI_API_KEY)
+            #cls._model = cls._client
+
+            cls._client = genai.Client(api_key=GEMINI_API_KEY)
+            models = cls._client.models.list()
+            print(models)
+
 
     @staticmethod
     def get_prompt_for_title(title: str, query: str) -> str:
@@ -254,7 +267,7 @@ class GenModel:
             f"Title: {title}\n"
             "Rate relevance & quality 1–10 (just give the number)."
         )
-
+    
     @classmethod
     def get_score_for_title(cls, title: str, query: str) -> float:
         """
@@ -265,15 +278,27 @@ class GenModel:
         cls._initialize_model()
         prompt = cls.get_prompt_for_title(title, query)
         try:
-            response = cls._model.generate_content(prompt)
+            response = cls._model.models.generate_content(
+                model=MODEL_NAME,
+                contents=prompt
+            )
             score_text = response.text.strip()
             match = re.search(REGEX_PATTERN, score_text)
             return float(match.group()) if match else DEFAULT_SCORE
-        except (ValueError, AttributeError) as e:
-            print(f"[Error] Failed to parse score for '{title}': {e}")
+        
+        except (ValueError, AttributeError):
+            print(
+                "[Warning] Gemini response could not be parsed. "
+                "Using default relevance score."
+            )
             return DEFAULT_SCORE
+   
+            
         except Exception as e:
-            print(f"[Error] API call failed for '{title}': {e}")
+            print(
+                "[Warning] Gemini API call failed. "
+                "Falling back to default relevance score."
+            )
             return DEFAULT_SCORE
 
 
@@ -306,13 +331,23 @@ class VideoProcessor:
 
 if __name__ == '__main__':
     required_env_vars = ['YT_API_KEY', 'GEMINI_API_KEY']
+    missing = [v for v in required_env_vars if not os.environ.get(v)]
 
-    if any([env_var not in os.environ for env_var in required_env_vars]):
-        raise KeyError(
-            "Error: YouTube and/or Gemini API keys not set in environment variables.")
+    if missing:
+        raise EnvironmentError(
+            f"Missing required environment variables: {', '.join(missing)}"
+        )
 
     user_query = input("Enter your search: ")
 
     video_processor = VideoProcessor()
     pick_best = video_processor.find_and_rank_videos(user_query)
 
+    if not pick_best:
+        print("No relevant videos found.")
+    else:
+        for idx, video in enumerate(pick_best, start=1):
+            print(f"\n#{idx}")
+            print(f"Title: {video['title']}")
+            print(f"Score: {video['score']}")
+            print(f"Published: {video['publishedAt']}")
