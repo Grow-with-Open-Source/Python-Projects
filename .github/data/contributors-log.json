@@ -292,5 +292,14 @@
       "58"
     ],
     "demo-path": "Number-Plate-Detection"
+  },
+  "Motion-Detection": {
+    "contributor-name": [
+      "iamdevdhanush"
+    ],
+    "pull-request-number": [
+      "62"
+    ],
+    "demo-path": "Motion-Detection"
   }
 }
