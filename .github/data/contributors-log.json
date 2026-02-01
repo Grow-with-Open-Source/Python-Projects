@@ -87,11 +87,13 @@
   "Password-Generator": {
     "contributor-name": [
       "ShashiNova",
-      "PieBerlin"
+      "PieBerlin",
+      "Bestbrainof24"
     ],
     "pull-request-number": [
       "13",
-      "53"
+      "53",
+      "66"
     ],
     "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Password-Generator/"
   },
