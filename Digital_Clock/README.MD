@@ -34,4 +34,8 @@ A simple Python-based digital clock application with a graphical user interface 
 3. **Execution:**  
    The application runs continuously, keeping the time accurate until the user closes the window.
 
-
+## Features Added 
+- Alarm functionality 
+- 12/24 hour toggle 
+- Theme switch 
+- Improved input validation 
