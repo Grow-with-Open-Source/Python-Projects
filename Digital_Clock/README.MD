@@ -33,5 +33,3 @@ A simple Python-based digital clock application with a graphical user interface 
 
 3. **Execution:**  
    The application runs continuously, keeping the time accurate until the user closes the window.
-
-
