@@ -24,39 +24,44 @@ def fahrenheit_to_kelvin(fahrenheit):
 def kelvin_to_fahrenheit(kelvin):
     return (kelvin - 273.15) * 9 / 5 + 32
 
+choice_Action = {
+    1: ("Celsius to Fahrenheit", celsius_to_fahrenheit),
+    2: ("Fahrenheit to Celsius", fahrenheit_to_celsius),
+    3: ("Celsius to Kelvin", celsius_to_kelvin),
+    4: ("Kelvin to Celsius", kelvin_to_celsius),
+    5: ("Fahrenheit to Kelvin", fahrenheit_to_kelvin),
+    6: ("Kelvin to Fahrenheit", kelvin_to_fahrenheit)
+
+}
 
 def main():
     print("🌡️ Temperature Converter")
-    print("1. Celsius to Fahrenheit")
-    print("2. Fahrenheit to Celsius")
-    print("3. Celsius to Kelvin")
-    print("4. Kelvin to Celsius")
-    print("5. Fahrenheit to Kelvin")
-    print("6. Kelvin to Fahrenheit")
+    for option in choice_Action.items(): print(f"{option[0]}. {option[1][0]}") # print number with option
 
-    choice = input("Enter choice (1–6): ")
+    while True:
 
-    if choice == "1":
-        c = float(input("Enter Celsius: "))
-        print(f"{c}°C = {celsius_to_fahrenheit(c):.2f}°F")
-    elif choice == "2":
-        f = float(input("Enter Fahrenheit: "))
-        print(f"{f}°F = {fahrenheit_to_celsius(f):.2f}°C")
-    elif choice == "3":
-        c = float(input("Enter Celsius: "))
-        print(f"{c}°C = {celsius_to_kelvin(c):.2f}K")
-    elif choice == "4":
-        k = float(input("Enter Kelvin: "))
-        print(f"{k}K = {kelvin_to_celsius(k):.2f}°C")
-    elif choice == "5":
-        f = float(input("Enter Fahrenheit: "))
-        print(f"{f}°F = {fahrenheit_to_kelvin(f):.2f}K")
-    elif choice == "6":
-        k = float(input("Enter Kelvin: "))
-        print(f"{k}K = {kelvin_to_fahrenheit(k):.2f}°F")
-    else:
-        print("Invalid choice ❌")
+        while True:
+            try:
+                choice = int(input("Enter choice (1–6) or -1 for exit: "))
+            except ValueError:
+                print("You can not input strings")
+            else: break
 
+        if choice == -1: break
+        elif choice in choice_Action:
+            parameter1, parameter2 = choice_Action[choice][0].split(" to ")
+
+            while True:
+                try:
+                    value = float(input(f"Enter: {parameter1} "))
+                except ValueError:
+                    print("You can not input strings")
+                else: break
+
+            print(f"{value} {parameter1} = {choice_Action[choice][1](value):.2f} {parameter2}")
+        else:
+            print(f"{choice} is invalid, please enter values from 1 - 6")
+            continue
 
 if __name__ == "__main__":
     main()
