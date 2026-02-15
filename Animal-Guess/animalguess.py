@@ -1,5 +1,10 @@
+def normalize_input(text):
+    """
+    Normalize user input for comparison.
+    Strips whitespace and converts to lowercase.
+    """
+    return text.strip().lower()
 
-# Improved version with modular structure, input validation, and typo fixes
 
 def check_guess(guess, answer):
     """
@@ -8,16 +13,19 @@ def check_guess(guess, answer):
     Returns 1 if correct, 0 otherwise.
     """
     attempt = 0
+
     while attempt < 3:
-        if guess.lower().strip() == answer.lower():
+        if normalize_input(guess) == normalize_input(answer):
             print("✅ Correct Answer!")
-            return 1  # increment score
+            return 1
         else:
             attempt += 1
             if attempt < 3:
-                guess = input("❌ Wrong answer. Try again: ").strip()
+                guess = input("❌ Wrong answer. Try again: ")
+
     print("The correct answer is:", answer)
     return 0
+
 
 def main():
     """
@@ -33,12 +41,15 @@ def main():
     score = 0
 
     for question, answer in questions:
-        guess = input(question + " ").strip()
-        while not guess:
-            guess = input("Please enter a valid guess: ").strip()
+        guess = input(question + " ")
+
+        while not guess.strip():
+            guess = input("Please enter a valid guess: ")
+
         score += check_guess(guess, answer)
 
     print(f"\n🏆 Your Total Score is: {score} out of {len(questions)}")
+
 
 if __name__ == "__main__":
     main()
