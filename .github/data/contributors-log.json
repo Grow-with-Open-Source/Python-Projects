@@ -187,11 +187,13 @@
   "Digital_Clock": {
     "contributor-name": [
       "DarkSlayer102",
-      "swati-londhe"
+      "swati-londhe",
+      "aishwary-vansh"
     ],
     "pull-request-number": [
       "25",
-      "41"
+      "41",
+      "68"
     ],
     "demo-path": "Digital_Clock"
   },
