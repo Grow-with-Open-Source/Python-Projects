@@ -2,33 +2,48 @@ import pyautogui
 import keyboard
 import time
 
-clicking = False
 
+def run_auto_clicker(delay: float = 0.01) -> None:
+    """
+    Runs an auto clicker that can be controlled with keyboard hotkeys.
 
-def start_clicking():
-    global clicking
-    clicking = True
-    print("Auto clicker started")
-
-
-def stop_clicking():
-    global clicking
+    Controls:
+    - Press 'S' to start clicking
+    - Press 'E' to stop clicking
+    - Press 'Q' to quit
+    """
     clicking = False
-    print("Auto clicker stopped")
+
+    def start_clicking():
+        nonlocal clicking
+        clicking = True
+        print("✅ Auto clicker started")
+
+    def stop_clicking():
+        nonlocal clicking
+        clicking = False
+        print("⏹ Auto clicker stopped")
+
+    keyboard.add_hotkey("s", start_clicking)
+    keyboard.add_hotkey("e", stop_clicking)
+
+    print("Press 'S' to start clicking")
+    print("Press 'E' to stop clicking")
+    print("Press 'Q' to quit")
+
+    try:
+        while True:
+            if clicking:
+                pyautogui.click()
+                time.sleep(delay)
+
+            if keyboard.is_pressed("q"):
+                print("👋 Exiting program")
+                break
+
+    except KeyboardInterrupt:
+        print("\nProgram interrupted by user.")
 
 
-keyboard.add_hotkey("s", start_clicking)
-keyboard.add_hotkey("e", stop_clicking)
-
-print("Press 'S' to start clicking")
-print("Press 'E' to stop clicking")
-print("Press 'Q' to quit")
-
-while True:
-    if clicking:
-        pyautogui.click()
-        time.sleep(0.001)
-
-    if keyboard.is_pressed("q"):
-        print("Exiting program")
-        break
+if __name__ == "__main__":
+    run_auto_clicker()
