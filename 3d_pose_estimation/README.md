@@ -3,7 +3,6 @@
 This project implements real-time 3D pose estimation using MediaPipe and OpenCV. It captures video from a webcam, detects human pose landmarks in 3D, and sends the landmark data to a Unity application via UDP.
 
 ## Table of Contents
-- [Features](#features)
 - [Requirements](#requirements)
 
 
@@ -14,10 +13,6 @@ This project implements real-time 3D pose estimation using MediaPipe and OpenCV.
 - Option to terminate the program by pressing the 'q' key.
 
 ## Requirements
-- Python 3.x
-- OpenCV
-- MediaPipe
-- NumPy
-- JSON
-- Socket
+- Python 3.8 or higher
+pip install opencv-python mediapipe numpy
 
