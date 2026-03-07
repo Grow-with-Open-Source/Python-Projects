@@ -16,6 +16,8 @@ player2_name.grid(row=2, column=1, columnspan=8)
 
 bclick = True
 flag = 0
+move_history = []
+move_number = 1
 current_player_name = p1.get() if p1.get() else 'X'
 
 
@@ -74,11 +76,17 @@ def checkForWin():
 
 
 def resetGame():
-    global bclick, flag, current_player_name
+    global bclick, flag, current_player_name, move_history, move_number
+
     for i in range(3):
         for j in range(3):
             buttons[i][j]["text"] = " "
             buttons[i][j].config(bg='black', state=NORMAL)
+
+    move_history = []
+    move_number = 1
+    history_box.delete(1.0, END)
+
     bclick = True
     flag = 0
     current_player_name = p1.get() if p1.get() else 'X'
@@ -92,16 +100,31 @@ buttons = [[Button(tk, text=' ', font='Times 20 bold', bg='black',
                    fg='white', height=4, width=8) for _ in range(3)] for _ in range(3)]
 
 
-def btnClick(button):
-    global bclick, flag
+def btnClick(row, col):
+    global bclick, flag, move_number
+
+    button = buttons[row][col]
+
     if button["text"] == " ":
+
         if bclick:
             button["text"] = "X"
+            player = p1.get() if p1.get() else "Player 1"
         else:
             button["text"] = "O"
+            player = p2.get() if p2.get() else "Player 2"
+
+        # cleaner move history
+        move = f"{move_number}. {player} -> ({row+1},{col+1})"
+        move_history.append(move)
+        history_box.insert(END, move + "\n")
+
+        move_number += 1
+
         bclick = not bclick
         flag += 1
         checkForWin()
+
     else:
         tkinter.messagebox.showinfo("Tic-Tac-Toe", "Button already Clicked!")
 
@@ -109,9 +132,13 @@ def btnClick(button):
 for i in range(3):
     for j in range(3):
         buttons[i][j].configure(command=lambda row=i,
-                                col=j: btnClick(buttons[row][col]))
+                                col=j: btnClick(row, col))
         buttons[i][j].grid(row=i + 3, column=j)
 reset_button = Button(tk, text="Reset Game", font='Times 16 bold',
                       bg='white', fg='black', command=resetGame)
 reset_button.grid(row=6, column=0, columnspan=3)
+Label(tk, text="Move History", font='Times 16 bold', bg='yellow').grid(row=0, column=10, padx=80)
+
+history_box = Text(tk, height=18, width=28, font=("Consolas", 11))
+history_box.grid(row=1, column=10, rowspan=6, padx=80)
 tk.mainloop()
