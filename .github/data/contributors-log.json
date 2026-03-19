@@ -322,5 +322,14 @@
       "67"
     ],
     "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Bowling-Action-Tracking"
+  },
+  "Encryption_Project": {
+    "contributor-name": [
+      "moonabys"
+    ],
+    "pull-request-number": [
+      "75"
+    ],
+    "demo-path": "Encryption_Project"
   }
 }

@@ -42,6 +42,7 @@ Welcome to **Python-Projects**, your friendly initiation into the world of open-
 | Number-Plate-Detection | [iamdevdhanush](https://github.com/iamdevdhanush "goto iamdevdhanush profile") | [#58](https://github.com/Grow-with-Open-Source/Python-Projects/pull/58 "visit pr #58") | [/Grow-with-Open-Source/Python-Projects/Number-Plate-Detection/](Number-Plate-Detection "view the result of Number-Plate-Detection") |
 | Motion-Detection | [iamdevdhanush](https://github.com/iamdevdhanush "goto iamdevdhanush profile") | [#62](https://github.com/Grow-with-Open-Source/Python-Projects/pull/62 "visit pr #62") | [/Grow-with-Open-Source/Python-Projects/Motion-Detection/](Motion-Detection "view the result of Motion-Detection") |
 | Bowling-Action-Tracking | [musharrafhamraz](https://github.com/musharrafhamraz "goto musharrafhamraz profile") | [#67](https://github.com/Grow-with-Open-Source/Python-Projects/pull/67 "visit pr #67") | [/Grow-with-Open-Source/Python-Projects/Bowling-Action-Tracking/](https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Bowling-Action-Tracking "view the result of Bowling-Action-Tracking") |
+| Encryption_Project | [moonabys](https://github.com/moonabys "goto moonabys profile") | [#75](https://github.com/Grow-with-Open-Source/Python-Projects/pull/75 "visit pr #75") | [/Grow-with-Open-Source/Python-Projects/Encryption_Project/](Encryption_Project "view the result of Encryption_Project") |
 <!-- TABLE ENDS -->
 
 </div>
