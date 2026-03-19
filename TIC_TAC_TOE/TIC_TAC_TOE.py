@@ -54,6 +54,10 @@ def check_winner():
            buttons[combo[1][0]][combo[1][1]]["text"] == \
            buttons[combo[2][0]][combo[2][1]]["text"] != " ":
 
+            # ✅ Highlight winning cells
+            for pos in combo:
+                buttons[pos[0]][pos[1]].config(bg="green")
+
             winner_symbol = buttons[combo[0][0]][combo[0][1]]["text"]
 
             if winner_symbol == "X":
@@ -75,7 +79,7 @@ def button_click(row, col):
     if buttons[row][col]["text"] == " ":
         buttons[row][col]["text"] = current_player
 
-        # ✅ YOUR FEATURE (Move History)
+        # ✅ Move History
         player = p1.get() if current_player == "X" else p2.get()
         player = player or ("Player 1" if current_player == "X" else "Player 2")
 
@@ -83,8 +87,6 @@ def button_click(row, col):
         history_box.insert(END, move + "\n")
 
         move_number += 1
-
-        # ✅ GAME LOGIC
         moves_count += 1
 
         if check_winner():
@@ -92,9 +94,13 @@ def button_click(row, col):
 
         if moves_count == 9:
             messagebox.showinfo("Tie", "It's a Tie!")
+            disable_buttons()  # ✅ prevent extra clicks
             return
 
         current_player = "O" if current_player == "X" else "X"
+
+    else:
+        messagebox.showinfo("Invalid Move", "Button already clicked!")
 
 def reset_game():
     global current_player, moves_count, move_number
@@ -107,9 +113,9 @@ def reset_game():
 
     for i in range(3):
         for j in range(3):
-            buttons[i][j].config(text=" ", state=NORMAL)
+            buttons[i][j].config(text=" ", bg="black", state=NORMAL)
 
-# Create buttons
+# Create buttons (safe version)
 for i in range(3):
     for j in range(3):
         buttons[i][j] = Button(
