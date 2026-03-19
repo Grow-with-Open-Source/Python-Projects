@@ -309,5 +309,14 @@
       "62"
     ],
     "demo-path": "Motion-Detection"
+  },
+  "Bowling-Action-Tracking": {
+    "contributor-name": [
+      "musharrafhamraz"
+    ],
+    "pull-request-number": [
+      "67"
+    ],
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Bowling-Action-Tracking"
   }
 }
