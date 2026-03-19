@@ -150,10 +150,12 @@
   },
   "Pomodoro-Timer": {
     "contributor-name": [
-      "adedayoprcs"
+      "adedayoprcs",
+      "Tithi234"
     ],
     "pull-request-number": [
-      "21"
+      "21",
+      "73"
     ],
     "demo-path": "Pomodoro-Timer"
   },
