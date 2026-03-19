@@ -285,10 +285,12 @@
   },
   "Auto-Clicker": {
     "contributor-name": [
-      "BasselDar"
+      "BasselDar",
+      "Tithi234"
     ],
     "pull-request-number": [
-      "54"
+      "54",
+      "70"
     ],
     "demo-path": "Auto-Clicker"
   },
