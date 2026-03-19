@@ -19,10 +19,12 @@
   },
   "TIC_TAC_TOE": {
     "contributor-name": [
-      "06RAVI06"
+      "06RAVI06",
+      "Tithi234"
     ],
     "pull-request-number": [
-      "7"
+      "7",
+      "77"
     ],
     "demo-path": "TIC_TAC_TOE"
   },
