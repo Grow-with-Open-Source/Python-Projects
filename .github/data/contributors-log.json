@@ -19,10 +19,12 @@
   },
   "TIC_TAC_TOE": {
     "contributor-name": [
-      "06RAVI06"
+      "06RAVI06",
+      "Tithi234"
     ],
     "pull-request-number": [
-      "7"
+      "7",
+      "77"
     ],
     "demo-path": "TIC_TAC_TOE"
   },
@@ -150,10 +152,12 @@
   },
   "Pomodoro-Timer": {
     "contributor-name": [
-      "adedayoprcs"
+      "adedayoprcs",
+      "Tithi234"
     ],
     "pull-request-number": [
-      "21"
+      "21",
+      "73"
     ],
     "demo-path": "Pomodoro-Timer"
   },
@@ -285,10 +289,12 @@
   },
   "Auto-Clicker": {
     "contributor-name": [
-      "BasselDar"
+      "BasselDar",
+      "Tithi234"
     ],
     "pull-request-number": [
-      "54"
+      "54",
+      "70"
     ],
     "demo-path": "Auto-Clicker"
   },
@@ -309,5 +315,23 @@
       "62"
     ],
     "demo-path": "Motion-Detection"
+  },
+  "Bowling-Action-Tracking": {
+    "contributor-name": [
+      "musharrafhamraz"
+    ],
+    "pull-request-number": [
+      "67"
+    ],
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Bowling-Action-Tracking"
+  },
+  "Encryption_Project": {
+    "contributor-name": [
+      "moonabys"
+    ],
+    "pull-request-number": [
+      "75"
+    ],
+    "demo-path": "Encryption_Project"
   }
 }
