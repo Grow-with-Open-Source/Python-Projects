@@ -79,10 +79,16 @@ def password_report(password: str) -> str:
     recommended_length = 8
 
     length = len(password)
-    upper = sum(1 for ch in password if ch.isupper())
-    lower = sum(1 for ch in password if ch.islower())
-    digits = sum(1 for ch in password if ch.isdigit())
-    symbols = sum(1 for ch in password if not ch.isalnum())
+    upper = lower =  digits =  symbols =  0
+    for letter in password:
+        if letter.isupper():
+            upper += 1
+        elif letter.islower():
+            lower += 1
+        elif letter.isdigit():
+            digits += 1
+        else:
+            symbols += 1
 
     parts = []
 
