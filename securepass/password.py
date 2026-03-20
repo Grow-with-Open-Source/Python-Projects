@@ -3,16 +3,15 @@ import string
 
 
 def main():
-    while True:
+    option = ""
+    while option not in ("1", "2"):
         option = input(
             "What would you like to do:\n"
             "1 Generate a secure password\n"
-            "2 Check strength of my password\n> "
+            "2 Check the strength of my password\n> "
         )
         if option not in ("1", "2"):
             print("Please choose 1 or 2.")
-            continue
-        break
 
     if option == "1":
         while True:
