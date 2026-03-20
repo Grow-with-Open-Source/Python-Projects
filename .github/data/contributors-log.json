@@ -335,5 +335,14 @@
       "75"
     ],
     "demo-path": "Encryption_Project"
+  },
+  "securepass": {
+    "contributor-name": [
+      "Lampard7crypt"
+    ],
+    "pull-request-number": [
+      "72"
+    ],
+    "demo-path": "securepass"
   }
 }

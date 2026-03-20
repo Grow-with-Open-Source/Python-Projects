@@ -43,6 +43,7 @@ Welcome to **Python-Projects**, your friendly initiation into the world of open-
 | Motion-Detection | [iamdevdhanush](https://github.com/iamdevdhanush "goto iamdevdhanush profile") | [#62](https://github.com/Grow-with-Open-Source/Python-Projects/pull/62 "visit pr #62") | [/Grow-with-Open-Source/Python-Projects/Motion-Detection/](Motion-Detection "view the result of Motion-Detection") |
 | Bowling-Action-Tracking | [musharrafhamraz](https://github.com/musharrafhamraz "goto musharrafhamraz profile") | [#67](https://github.com/Grow-with-Open-Source/Python-Projects/pull/67 "visit pr #67") | [/Grow-with-Open-Source/Python-Projects/Bowling-Action-Tracking/](https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Bowling-Action-Tracking "view the result of Bowling-Action-Tracking") |
 | Encryption_Project | [moonabys](https://github.com/moonabys "goto moonabys profile") | [#75](https://github.com/Grow-with-Open-Source/Python-Projects/pull/75 "visit pr #75") | [/Grow-with-Open-Source/Python-Projects/Encryption_Project/](Encryption_Project "view the result of Encryption_Project") |
+| securepass | [Lampard7crypt](https://github.com/Lampard7crypt "goto Lampard7crypt profile") | [#72](https://github.com/Grow-with-Open-Source/Python-Projects/pull/72 "visit pr #72") | [/Grow-with-Open-Source/Python-Projects/securepass/](securepass "view the result of securepass") |
 <!-- TABLE ENDS -->
 
 </div>
