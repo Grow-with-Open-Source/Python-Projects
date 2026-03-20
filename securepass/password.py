@@ -14,7 +14,9 @@ def main():
             print("Please choose 1 or 2.")
 
     if option == "1":
-        while True:
+        choice = None
+        length = None
+        while choice not in (1, 2, 3, 4):
             try:
                 choice = int(
                     input(
@@ -25,15 +27,17 @@ def main():
                         "4 Symbols only password\n> "
                     )
                 )
-                length = int(input("Enter your desired length (between 4 and 20): "))
+                if choice not in (1, 2, 3, 4):
+                    print("Invalid choice, try again.")
             except ValueError:
                 print("Invalid input, enter numbers only.")
-                continue
-
-            if choice not in (1, 2, 3, 4) or length not in range(4, 21):
-                print("Invalid input, try again.")
-                continue
-            break
+        while length not in range(4, 21):
+            try:
+                length = int(input("Enter your desired length (between 4 and 20): "))
+                if length not in range(4, 21):
+                    print("Invalid length, try again.")
+            except ValueError:
+                print("Invalid input, enter numbers only.")
 
         if choice == 1:
             passwd = mix_of_all(length)
