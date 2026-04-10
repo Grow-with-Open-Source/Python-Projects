@@ -3,14 +3,8 @@ from textblob import TextBlob
 
 def check_spelling():
     input_text = input_entry.get()
-    if not input_text:
-        result_label.config(text="TextBox cannot be empty!", fg="red")
-        return
-    corrected_text = str(TextBlob(input_text).correct())
-    if input_text!=corrected_text:
-        result_label.config(text="Corrected text: " + corrected_text, fg="black")
-        return
-    result_label.config(text=f"{input_text} is Correct!", fg="green")
+    corrected_text = TextBlob(input_text).correct()
+    result_label.config(text="Corrected text: " + str(corrected_text))
 
 def reset():
     input_entry.delete(0, tk.END)
