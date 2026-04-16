@@ -329,10 +329,12 @@
   },
   "Encryption_Project": {
     "contributor-name": [
-      "moonabys"
+      "moonabys",
+      "yumicce"
     ],
     "pull-request-number": [
-      "75"
+      "75",
+      "81"
     ],
     "demo-path": "Encryption_Project"
   },
