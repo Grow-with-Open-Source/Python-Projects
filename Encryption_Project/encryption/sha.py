@@ -7,4 +7,5 @@
 import hashlib
 
 def encryption_sha(message: str):
-    return hashlib.sha256().digest() # This makes the encryption in SHA-256. This is the usually how your passkeys are encrypted
+    encoded_message = message.encode()
+    return hashlib.sha256(encoded_message).digest() # This makes the encryption in SHA-256. This is the usually how your passkeys are encrypted
