@@ -346,5 +346,14 @@
       "72"
     ],
     "demo-path": "securepass"
+  },
+  "Biosimilars_Finder": {
+    "contributor-name": [
+      "cmodevcodes"
+    ],
+    "pull-request-number": [
+      "83"
+    ],
+    "demo-path": "Biosimilars_Finder"
   }
 }

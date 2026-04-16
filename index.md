@@ -44,6 +44,7 @@ Welcome to **Python-Projects**, your friendly initiation into the world of open-
 | Bowling-Action-Tracking | [musharrafhamraz](https://github.com/musharrafhamraz "goto musharrafhamraz profile") | [#67](https://github.com/Grow-with-Open-Source/Python-Projects/pull/67 "visit pr #67") | [/Grow-with-Open-Source/Python-Projects/Bowling-Action-Tracking/](https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Bowling-Action-Tracking "view the result of Bowling-Action-Tracking") |
 | Encryption_Project | [moonabys](https://github.com/moonabys "goto moonabys profile"), [yumicce](https://github.com/yumicce "goto yumicce profile") | [#75](https://github.com/Grow-with-Open-Source/Python-Projects/pull/75 "visit pr #75"), [#81](https://github.com/Grow-with-Open-Source/Python-Projects/pull/81 "visit pr #81") | [/Grow-with-Open-Source/Python-Projects/Encryption_Project/](Encryption_Project "view the result of Encryption_Project") |
 | securepass | [Lampard7crypt](https://github.com/Lampard7crypt "goto Lampard7crypt profile") | [#72](https://github.com/Grow-with-Open-Source/Python-Projects/pull/72 "visit pr #72") | [/Grow-with-Open-Source/Python-Projects/securepass/](securepass "view the result of securepass") |
+| Biosimilars_Finder | [cmodevcodes](https://github.com/cmodevcodes "goto cmodevcodes profile") | [#83](https://github.com/Grow-with-Open-Source/Python-Projects/pull/83 "visit pr #83") | [/Grow-with-Open-Source/Python-Projects/Biosimilars_Finder/](Biosimilars_Finder "view the result of Biosimilars_Finder") |
 <!-- TABLE ENDS -->
 
 </div>
