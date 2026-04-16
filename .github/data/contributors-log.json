@@ -355,5 +355,14 @@
       "83"
     ],
     "demo-path": "Biosimilars_Finder"
+  },
+  "Spell-Sense": {
+    "contributor-name": [
+      "princechaudhary007"
+    ],
+    "pull-request-number": [
+      "82"
+    ],
+    "demo-path": "Spell-Sense"
   }
 }
