@@ -391,5 +391,14 @@
       "89"
     ],
     "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Bouncing-DVD"
+  },
+  "Dog-Age-Calculator": {
+    "contributor-name": [
+      "AdyaTech"
+    ],
+    "pull-request-number": [
+      "90"
+    ],
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Dog-Age-Calculator"
   }
 }

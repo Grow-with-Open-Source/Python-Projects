@@ -49,6 +49,7 @@ Welcome to **Python-Projects**, your friendly initiation into the world of open-
 | Birthday-Paradox | [AdyaTech](https://github.com/AdyaTech "goto AdyaTech profile") | [#86](https://github.com/Grow-with-Open-Source/Python-Projects/pull/86 "visit pr #86") | [/Grow-with-Open-Source/Python-Projects/Birthday-Paradox/](https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Birthday-Paradox "view the result of Birthday-Paradox") |
 | BitMap-Message | [AdyaTech](https://github.com/AdyaTech "goto AdyaTech profile") | [#87](https://github.com/Grow-with-Open-Source/Python-Projects/pull/87 "visit pr #87") | [/Grow-with-Open-Source/Python-Projects/BitMap-Message/](https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/BitMap-Message "view the result of BitMap-Message") |
 | Bouncing-DVD | [AdyaTech](https://github.com/AdyaTech "goto AdyaTech profile") | [#89](https://github.com/Grow-with-Open-Source/Python-Projects/pull/89 "visit pr #89") | [/Grow-with-Open-Source/Python-Projects/Bouncing-DVD/](https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Bouncing-DVD "view the result of Bouncing-DVD") |
+| Dog-Age-Calculator | [AdyaTech](https://github.com/AdyaTech "goto AdyaTech profile") | [#90](https://github.com/Grow-with-Open-Source/Python-Projects/pull/90 "visit pr #90") | [/Grow-with-Open-Source/Python-Projects/Dog-Age-Calculator/](https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Dog-Age-Calculator "view the result of Dog-Age-Calculator") |
 <!-- TABLE ENDS -->
 
 </div>
