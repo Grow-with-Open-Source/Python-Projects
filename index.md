@@ -46,6 +46,7 @@ Welcome to **Python-Projects**, your friendly initiation into the world of open-
 | securepass | [Lampard7crypt](https://github.com/Lampard7crypt "goto Lampard7crypt profile") | [#72](https://github.com/Grow-with-Open-Source/Python-Projects/pull/72 "visit pr #72") | [/Grow-with-Open-Source/Python-Projects/securepass/](securepass "view the result of securepass") |
 | Biosimilars_Finder | [cmodevcodes](https://github.com/cmodevcodes "goto cmodevcodes profile") | [#83](https://github.com/Grow-with-Open-Source/Python-Projects/pull/83 "visit pr #83") | [/Grow-with-Open-Source/Python-Projects/Biosimilars_Finder/](Biosimilars_Finder "view the result of Biosimilars_Finder") |
 | Spell-Sense | [princechaudhary007](https://github.com/princechaudhary007 "goto princechaudhary007 profile") | [#82](https://github.com/Grow-with-Open-Source/Python-Projects/pull/82 "visit pr #82") | [/Grow-with-Open-Source/Python-Projects/Spell-Sense/](Spell-Sense "view the result of Spell-Sense") |
+| Birthday-Paradox | [AdyaTech](https://github.com/AdyaTech "goto AdyaTech profile") | [#86](https://github.com/Grow-with-Open-Source/Python-Projects/pull/86 "visit pr #86") | [/Grow-with-Open-Source/Python-Projects/Birthday-Paradox/](https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Birthday-Paradox "view the result of Birthday-Paradox") |
 <!-- TABLE ENDS -->
 
 </div>
