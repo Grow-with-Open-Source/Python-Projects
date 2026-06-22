@@ -373,5 +373,14 @@
       "86"
     ],
     "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Birthday-Paradox"
+  },
+  "BitMap-Message": {
+    "contributor-name": [
+      "AdyaTech"
+    ],
+    "pull-request-number": [
+      "87"
+    ],
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/BitMap-Message"
   }
 }
