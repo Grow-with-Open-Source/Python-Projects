@@ -400,5 +400,14 @@
       "90"
     ],
     "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Dog-Age-Calculator"
+  },
+  "Story-Generator": {
+    "contributor-name": [
+      "AdyaTech"
+    ],
+    "pull-request-number": [
+      "91"
+    ],
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Story-Generator"
   }
 }
