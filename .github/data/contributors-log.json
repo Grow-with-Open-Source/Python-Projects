@@ -382,5 +382,14 @@
       "87"
     ],
     "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/BitMap-Message"
+  },
+  "Bouncing-DVD": {
+    "contributor-name": [
+      "AdyaTech"
+    ],
+    "pull-request-number": [
+      "89"
+    ],
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Bouncing-DVD"
   }
 }

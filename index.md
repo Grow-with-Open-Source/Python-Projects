@@ -48,6 +48,7 @@ Welcome to **Python-Projects**, your friendly initiation into the world of open-
 | Spell-Sense | [princechaudhary007](https://github.com/princechaudhary007 "goto princechaudhary007 profile") | [#82](https://github.com/Grow-with-Open-Source/Python-Projects/pull/82 "visit pr #82") | [/Grow-with-Open-Source/Python-Projects/Spell-Sense/](Spell-Sense "view the result of Spell-Sense") |
 | Birthday-Paradox | [AdyaTech](https://github.com/AdyaTech "goto AdyaTech profile") | [#86](https://github.com/Grow-with-Open-Source/Python-Projects/pull/86 "visit pr #86") | [/Grow-with-Open-Source/Python-Projects/Birthday-Paradox/](https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Birthday-Paradox "view the result of Birthday-Paradox") |
 | BitMap-Message | [AdyaTech](https://github.com/AdyaTech "goto AdyaTech profile") | [#87](https://github.com/Grow-with-Open-Source/Python-Projects/pull/87 "visit pr #87") | [/Grow-with-Open-Source/Python-Projects/BitMap-Message/](https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/BitMap-Message "view the result of BitMap-Message") |
+| Bouncing-DVD | [AdyaTech](https://github.com/AdyaTech "goto AdyaTech profile") | [#89](https://github.com/Grow-with-Open-Source/Python-Projects/pull/89 "visit pr #89") | [/Grow-with-Open-Source/Python-Projects/Bouncing-DVD/](https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Bouncing-DVD "view the result of Bouncing-DVD") |
 <!-- TABLE ENDS -->
 
 </div>
