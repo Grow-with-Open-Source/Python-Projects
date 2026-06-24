@@ -364,5 +364,59 @@
       "82"
     ],
     "demo-path": "Spell-Sense"
+  },
+  "Birthday-Paradox": {
+    "contributor-name": [
+      "AdyaTech"
+    ],
+    "pull-request-number": [
+      "86"
+    ],
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Birthday-Paradox"
+  },
+  "BitMap-Message": {
+    "contributor-name": [
+      "AdyaTech"
+    ],
+    "pull-request-number": [
+      "87"
+    ],
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/BitMap-Message"
+  },
+  "Bouncing-DVD": {
+    "contributor-name": [
+      "AdyaTech"
+    ],
+    "pull-request-number": [
+      "89"
+    ],
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Bouncing-DVD"
+  },
+  "Dog-Age-Calculator": {
+    "contributor-name": [
+      "AdyaTech"
+    ],
+    "pull-request-number": [
+      "90"
+    ],
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Dog-Age-Calculator"
+  },
+  "Story-Generator": {
+    "contributor-name": [
+      "AdyaTech"
+    ],
+    "pull-request-number": [
+      "91"
+    ],
+    "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Story-Generator"
+  },
+  "slot-machine": {
+    "contributor-name": [
+      "appiokstella"
+    ],
+    "pull-request-number": [
+      "93"
+    ],
+    "demo-path": "slot-machine"
   }
 }
