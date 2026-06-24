@@ -5,7 +5,8 @@ import time
 
 
 def get_sentence():
-    with open("21 Python Projects\\13_WPM TYPING TEST\\text.txt", "r") as file:
+    # ENTER THE RELATIVE PATH OF TEXT.TXT
+    with open("ENTER THE RELATIVE PATH OF TEXT.TXT", "r") as file:
         sentences = file.readlines()
 
     return random.choice(sentences).strip()
