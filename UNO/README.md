@@ -2,8 +2,6 @@
 
 <div align="center">
 
-![UNO Game](uno.png)
-
 **A Console-Based UNO Card Game Implementation in Python**
 
 > Play against the computer in this exciting implementation of the classic UNO card game with a beautiful rich terminal UI.
@@ -13,21 +11,6 @@
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)](https://github.com/mayank-gariya/crazy-python-projects-/tree/main/UNO)
 
 </div>
-
----
-
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [UNO Game Rules](#uno-game-rules)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [How to Play](#how-to-play)
-- [Game Screenshots](#game-screenshots)
-- [Future Enhancements](#future-enhancements)
-- [Contributing](#contributing)
 
 ---
 
@@ -104,27 +87,21 @@ pip install rich
 UNO/
 ├── app.py                      # Main application entry point
 ├── logic_rich.py               # Enhanced game logic with Rich UI
-├── logic.py                    # Core game logic engine
 ├── deck.py                     # UNO deck generation and management
-├── UNO_rules.py               # Game rules and card validation
+├── UNO_rules.py                # Game rules and card validation
 ├── card_showing_logic.py       # Card display and formatting
 ├── summary.py                  # Game summary and statistics
 ├── requirenment.txt            # Project dependencies
-├── uno.png                     # UNO game image
-├── result.png                  # Gameplay screenshot 1
-├── result2.png                 # Gameplay screenshot 2
 └── README.md                   # This file
 ```
 
 ### File Descriptions
 
 #### 🎮 **app.py**
-- **Purpose:** Main entry point for the game
-- **Contains:** Game initialization and startup
+- **Purpose:** Game UNO
 - **Usage:** Run this file to start playing
 
 #### 🧠 **logic_rich.py**
-- **Purpose:** Enhanced game logic with Rich library integration
 - **Contains:** Player turns, computer AI, game flow control
 - **Features:** Beautiful console output, real-time status updates
 
@@ -217,16 +194,6 @@ python app.py
 
 ---
 
-## 📸 Game Screenshots
-
-### Gameplay Screenshot 1
-![Result 1](result.png)
-
-### Gameplay Screenshot 2
-![Result 2](result2.png)
-
----
-
 ## 🚀 Future Enhancements
 
 ### Phase 2: Multiplayer Mode
@@ -266,18 +233,6 @@ After each game, you'll receive a detailed summary including:
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open** a Pull Request
-
----
-
 ## 📝 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
@@ -300,13 +255,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 **Repository:** [crazy-python-projects-](https://github.com/mayank-gariya/crazy-python-projects-)
 
 ---
-
-<div align="center">
-
-### 🎉 Enjoy the Game!
-
-**Made with ❤️ in Python**
-
-![Python](https://img.shields.io/badge/Made%20with-Python-blue?style=for-the-badge&logo=python)
-
-</div>
