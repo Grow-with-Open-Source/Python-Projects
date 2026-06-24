@@ -1,0 +1,4 @@
+The quick brown fox jumps over the lazy dog.
+Python is an amazing programming language.
+Practice makes perfect.
+Coding is a skill built through consistency.
