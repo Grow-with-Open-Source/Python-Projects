@@ -51,6 +51,7 @@ Welcome to **Python-Projects**, your friendly initiation into the world of open-
 | Bouncing-DVD | [AdyaTech](https://github.com/AdyaTech "goto AdyaTech profile") | [#89](https://github.com/Grow-with-Open-Source/Python-Projects/pull/89 "visit pr #89") | [/Grow-with-Open-Source/Python-Projects/Bouncing-DVD/](https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Bouncing-DVD "view the result of Bouncing-DVD") |
 | Dog-Age-Calculator | [AdyaTech](https://github.com/AdyaTech "goto AdyaTech profile") | [#90](https://github.com/Grow-with-Open-Source/Python-Projects/pull/90 "visit pr #90") | [/Grow-with-Open-Source/Python-Projects/Dog-Age-Calculator/](https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Dog-Age-Calculator "view the result of Dog-Age-Calculator") |
 | Story-Generator | [AdyaTech](https://github.com/AdyaTech "goto AdyaTech profile") | [#91](https://github.com/Grow-with-Open-Source/Python-Projects/pull/91 "visit pr #91") | [/Grow-with-Open-Source/Python-Projects/Story-Generator/](https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Story-Generator "view the result of Story-Generator") |
+| slot-machine | [appiokstella](https://github.com/appiokstella "goto appiokstella profile") | [#93](https://github.com/Grow-with-Open-Source/Python-Projects/pull/93 "visit pr #93") | [/Grow-with-Open-Source/Python-Projects/slot-machine/](slot-machine "view the result of slot-machine") |
 <!-- TABLE ENDS -->
 
 </div>

@@ -409,5 +409,14 @@
       "91"
     ],
     "demo-path": "https://github.com/Grow-with-Open-Source/Python-Projects/tree/main/Story-Generator"
+  },
+  "slot-machine": {
+    "contributor-name": [
+      "appiokstella"
+    ],
+    "pull-request-number": [
+      "93"
+    ],
+    "demo-path": "slot-machine"
   }
 }
