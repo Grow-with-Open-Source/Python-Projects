@@ -418,5 +418,14 @@
       "93"
     ],
     "demo-path": "slot-machine"
+  },
+  "credit-card-fraud-detection": {
+    "contributor-name": [
+      "zain-cs"
+    ],
+    "pull-request-number": [
+      "94"
+    ],
+    "demo-path": "credit-card-fraud-detection"
   }
 }
