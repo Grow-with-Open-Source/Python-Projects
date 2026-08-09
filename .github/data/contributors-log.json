@@ -427,5 +427,14 @@
       "94"
     ],
     "demo-path": "credit-card-fraud-detection"
+  },
+  "UNO": {
+    "contributor-name": [
+      "mayank-gariya"
+    ],
+    "pull-request-number": [
+      "92"
+    ],
+    "demo-path": "UNO"
   }
 }
