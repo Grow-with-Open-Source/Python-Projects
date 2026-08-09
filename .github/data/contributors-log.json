@@ -445,5 +445,14 @@
       "95"
     ],
     "demo-path": "Typing-Speed-Test"
+  },
+  "Titanic-Survival-Prediction": {
+    "contributor-name": [
+      "zain-cs"
+    ],
+    "pull-request-number": [
+      "97"
+    ],
+    "demo-path": "Titanic-Survival-Prediction"
   }
 }
