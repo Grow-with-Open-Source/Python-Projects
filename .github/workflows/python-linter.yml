@@ -3,7 +3,7 @@ name: lint-python-code
 on:
   pull_request:
     branches: [main]
-    paths: ["**.py", "**.ipynb"]
+    paths: ["*/**.py", "*/**.ipynb"]
   workflow_call:
 
 jobs:
