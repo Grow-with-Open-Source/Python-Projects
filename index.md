@@ -54,6 +54,7 @@ Welcome to **Python-Projects**, your friendly initiation into the world of open-
 | slot-machine | [appiokstella](https://github.com/appiokstella "goto appiokstella profile") | [#93](https://github.com/Grow-with-Open-Source/Python-Projects/pull/93 "visit pr #93") | [/Grow-with-Open-Source/Python-Projects/slot-machine/](slot-machine "view the result of slot-machine") |
 | credit-card-fraud-detection | [zain-cs](https://github.com/zain-cs "goto zain-cs profile") | [#94](https://github.com/Grow-with-Open-Source/Python-Projects/pull/94 "visit pr #94") | [/Grow-with-Open-Source/Python-Projects/credit-card-fraud-detection/](credit-card-fraud-detection "view the result of credit-card-fraud-detection") |
 | UNO | [mayank-gariya](https://github.com/mayank-gariya "goto mayank-gariya profile") | [#92](https://github.com/Grow-with-Open-Source/Python-Projects/pull/92 "visit pr #92") | [/Grow-with-Open-Source/Python-Projects/UNO/](UNO "view the result of UNO") |
+| Typing-Speed-Test | [stellaappiok](https://github.com/stellaappiok "goto stellaappiok profile") | [#95](https://github.com/Grow-with-Open-Source/Python-Projects/pull/95 "visit pr #95") | [/Grow-with-Open-Source/Python-Projects/Typing-Speed-Test/](Typing-Speed-Test "view the result of Typing-Speed-Test") |
 <!-- TABLE ENDS -->
 
 </div>

@@ -436,5 +436,14 @@
       "92"
     ],
     "demo-path": "UNO"
+  },
+  "Typing-Speed-Test": {
+    "contributor-name": [
+      "stellaappiok"
+    ],
+    "pull-request-number": [
+      "95"
+    ],
+    "demo-path": "Typing-Speed-Test"
   }
 }
