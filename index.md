@@ -56,6 +56,7 @@ Welcome to **Python-Projects**, your friendly initiation into the world of open-
 | UNO | [mayank-gariya](https://github.com/mayank-gariya "goto mayank-gariya profile") | [#92](https://github.com/Grow-with-Open-Source/Python-Projects/pull/92 "visit pr #92") | [/Grow-with-Open-Source/Python-Projects/UNO/](UNO "view the result of UNO") |
 | Typing-Speed-Test | [stellaappiok](https://github.com/stellaappiok "goto stellaappiok profile") | [#95](https://github.com/Grow-with-Open-Source/Python-Projects/pull/95 "visit pr #95") | [/Grow-with-Open-Source/Python-Projects/Typing-Speed-Test/](Typing-Speed-Test "view the result of Typing-Speed-Test") |
 | Titanic-Survival-Prediction | [zain-cs](https://github.com/zain-cs "goto zain-cs profile") | [#97](https://github.com/Grow-with-Open-Source/Python-Projects/pull/97 "visit pr #97") | [/Grow-with-Open-Source/Python-Projects/Titanic-Survival-Prediction/](Titanic-Survival-Prediction "view the result of Titanic-Survival-Prediction") |
+| Duplicate-File-Finder | [zain-cs](https://github.com/zain-cs "goto zain-cs profile") | [#98](https://github.com/Grow-with-Open-Source/Python-Projects/pull/98 "visit pr #98") | [/Grow-with-Open-Source/Python-Projects/Duplicate-File-Finder/](Duplicate-File-Finder "view the result of Duplicate-File-Finder") |
 <!-- TABLE ENDS -->
 
 </div>

@@ -454,5 +454,14 @@
       "97"
     ],
     "demo-path": "Titanic-Survival-Prediction"
+  },
+  "Duplicate-File-Finder": {
+    "contributor-name": [
+      "zain-cs"
+    ],
+    "pull-request-number": [
+      "98"
+    ],
+    "demo-path": "Duplicate-File-Finder"
   }
 }
