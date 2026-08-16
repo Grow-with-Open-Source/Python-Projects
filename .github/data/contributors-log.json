@@ -463,5 +463,14 @@
       "98"
     ],
     "demo-path": "Duplicate-File-Finder"
+  },
+  "Automatic_file_backup": {
+    "contributor-name": [
+      "stellaappiok"
+    ],
+    "pull-request-number": [
+      "99"
+    ],
+    "demo-path": "Automatic_file_backup"
   }
 }
