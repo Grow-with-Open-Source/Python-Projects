@@ -1,0 +1,187 @@
+{
+    "Audi": [
+        "A4",
+        "A6",
+        "A8",
+        "Q7"
+    ],
+    "BMW": [
+        "3",
+        "5",
+        "6",
+        "7",
+        "X1",
+        "X3",
+        "X4",
+        "X5",
+        "Z4"
+    ],
+    "Bentley": [
+        "Continental"
+    ],
+    "Datsun": [
+        "GO",
+        "RediGO",
+        "redi-GO"
+    ],
+    "Ferrari": [
+        "GTC4Lusso"
+    ],
+    "Force": [
+        "Gurkha"
+    ],
+    "Ford": [
+        "Aspire",
+        "Ecosport",
+        "Endeavour",
+        "Figo",
+        "Freestyle"
+    ],
+    "Honda": [
+        "Amaze",
+        "CR",
+        "CR-V",
+        "City",
+        "Civic",
+        "Jazz",
+        "WR-V"
+    ],
+    "Hyundai": [
+        "Aura",
+        "Creta",
+        "Elantra",
+        "Grand",
+        "Santro",
+        "Tucson",
+        "Venue",
+        "Verna",
+        "i10",
+        "i20"
+    ],
+    "ISUZU": [
+        "MUX"
+    ],
+    "Isuzu": [
+        "D-Max",
+        "MUX"
+    ],
+    "Jaguar": [
+        "F-PACE",
+        "XE",
+        "XF"
+    ],
+    "Jeep": [
+        "Compass",
+        "Wrangler"
+    ],
+    "Kia": [
+        "Carnival",
+        "Seltos"
+    ],
+    "Land Rover": [
+        "Rover"
+    ],
+    "Lexus": [
+        "ES",
+        "NX",
+        "RX"
+    ],
+    "MG": [
+        "Hector"
+    ],
+    "Mahindra": [
+        "Alturas",
+        "Bolero",
+        "KUV",
+        "KUV100",
+        "Marazzo",
+        "Scorpio",
+        "Thar",
+        "XUV300",
+        "XUV500"
+    ],
+    "Maruti": [
+        "Alto",
+        "Baleno",
+        "Celerio",
+        "Ciaz",
+        "Dzire LXI",
+        "Dzire VXI",
+        "Dzire ZXI",
+        "Eeco",
+        "Ertiga",
+        "Ignis",
+        "S-Presso",
+        "Swift",
+        "Swift Dzire",
+        "Vitara",
+        "Wagon R",
+        "XL6"
+    ],
+    "Maserati": [
+        "Ghibli",
+        "Quattroporte"
+    ],
+    "Mercedes-AMG": [
+        "C"
+    ],
+    "Mercedes-Benz": [
+        "C-Class",
+        "CLS",
+        "E-Class",
+        "GL-Class",
+        "GLS",
+        "S-Class"
+    ],
+    "Mini": [
+        "Cooper"
+    ],
+    "Nissan": [
+        "Kicks",
+        "X-Trail"
+    ],
+    "Porsche": [
+        "Cayenne",
+        "Macan",
+        "Panamera"
+    ],
+    "Renault": [
+        "Duster",
+        "KWID",
+        "Triber"
+    ],
+    "Rolls-Royce": [
+        "Ghost"
+    ],
+    "Skoda": [
+        "Octavia",
+        "Rapid",
+        "Superb"
+    ],
+    "Tata": [
+        "Altroz",
+        "Harrier",
+        "Hexa",
+        "Nexon",
+        "Safari",
+        "Tiago",
+        "Tigor"
+    ],
+    "Toyota": [
+        "Camry",
+        "Fortuner",
+        "Glanza",
+        "Innova",
+        "Yaris"
+    ],
+    "Volkswagen": [
+        "Polo",
+        "Vento"
+    ],
+    "Volvo": [
+        "S90",
+        "XC",
+        "XC60",
+        "XC90"
+    ]
+}
