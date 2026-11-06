@@ -284,10 +284,12 @@
   },
   "Binary-Gene-Classifier-Model": {
     "contributor-name": [
-      "venkamita"
+      "venkamita",
+      "Bestbrainof24"
     ],
     "pull-request-number": [
-      "49"
+      "49",
+      "106"
     ],
     "demo-path": "Binary-Gene-Classifier-Model"
   },
