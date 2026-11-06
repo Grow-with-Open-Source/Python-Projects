@@ -485,5 +485,14 @@
       "107"
     ],
     "demo-path": "Rock-Paper-Scissors"
+  },
+  "QR-Code-Flask-App": {
+    "contributor-name": [
+      "raxaali"
+    ],
+    "pull-request-number": [
+      "108"
+    ],
+    "demo-path": "QR-Code-Flask-App/templates"
   }
 }
