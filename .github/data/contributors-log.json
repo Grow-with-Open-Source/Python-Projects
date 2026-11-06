@@ -476,5 +476,14 @@
       "99"
     ],
     "demo-path": "Automatic_file_backup"
+  },
+  "Rock-Paper-Scissors": {
+    "contributor-name": [
+      "AkashGowdaNC"
+    ],
+    "pull-request-number": [
+      "107"
+    ],
+    "demo-path": "Rock-Paper-Scissors"
   }
 }
