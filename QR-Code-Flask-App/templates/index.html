@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QR Code Generator</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f8;
+    display: flex;
+    justify-content: center;
+    padding: 40px 16px;
+  }
+  .card {
+    background: white;
+    border: 1px solid #e2e2e2;
+    border-radius: 12px;
+    padding: 24px;
+    width: 100%;
+    max-width: 380px;
+  }
+  h1 { font-size: 1.3rem; margin: 0 0 20px; }
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  button {
+    margin-top: 12px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  button:hover { background: #1d4ed8; }
+  .qr-box {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .qr-box img {
+    max-width: 100%;
+    border: 1px solid #e2e2e2;
+    border-radius: 8px;
+  }
+  a.download-link {
+    display: block;
+    margin-top: 12px;
+    text-align: center;
+    background: transparent;
+    border: 1px solid #2563eb;
+    color: #2563eb;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  a.download-link:hover { background: #2563eb; color: white; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>QR Code Generator</h1>
+    <form method="POST">
+      <input type="text" name="url" placeholder="https://example.com" value="{{ url }}" required>
+      <button type="submit">Generate QR Code</button>
+    </form>
+
+    {% if qr_ready %}
+    <div class="qr-box">
+      <img src="/download?url={{ url }}&preview=1" alt="QR code for {{ url }}">
+      <a class="download-link" href="/download?url={{ url }}">Download PNG</a>
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>
