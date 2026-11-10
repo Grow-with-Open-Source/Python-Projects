@@ -12,4 +12,4 @@ dog_age = calculate_dog_age(human_age)
 if dog_age is None:
     print("Age must be a positive number.")
 else:
-    print(f"The dog's age in dog years is {dog_age}.")
+   print(f"Dog's age in human years is: {human_years}")
