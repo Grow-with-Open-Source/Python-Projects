@@ -48,8 +48,7 @@ def main():
 
         score += check_guess(guess, answer)
 
-    print(f"\n🏆 Your Total Score is: {score} out of {len(questions)}")
-
+    print(f"Your total score is: {score}")
 
 if __name__ == "__main__":
     main()
