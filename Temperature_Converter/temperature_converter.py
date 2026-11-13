@@ -1,5 +1,6 @@
 from tkinter import *
-
+window = Tk()
+window.title("temperature_converter")
 def celsius_to_fahrenheit(celsius):
     return (celsius * 9 / 5) + 32
 
@@ -54,12 +55,6 @@ def ktf():
     entry.insert(0,kelvin_to_fahrenheit(finp))
            
 
-
-
-
-
-window = Tk()
-
 entry = Entry(window,bg="gray",fg="black",font="bold")
 button1 = Button(window,bg="black",fg="white",font="bold",text="C t F",width=20,command=ctf)
 button2 = Button(window,bg="black",fg="white",font="bold",text="F t C",width=20,command=ftc)
@@ -75,29 +70,4 @@ button4.pack(side="left")
 button5.pack(side="left")
 button6.pack(side="left")
 
-
-
 window.mainloop()
-
-
-
-def fahrenheit_to_celsius(fahrenheit):
-    return (fahrenheit - 32) * 5 / 9
-
-
-def celsius_to_kelvin(celsius):
-    return celsius + 273.15
-
-
-def kelvin_to_celsius(kelvin):
-    return kelvin - 273.15
-
-
-def fahrenheit_to_kelvin(fahrenheit):
-    return (fahrenheit - 32) * 5 / 9 + 273.15
-
-
-def kelvin_to_fahrenheit(kelvin):
-    return (kelvin - 273.15) * 9 / 5 + 32
-
-
