@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, send_file
+from flask import Flask, render_template, request, send_file, redirect, url_for
 import qrcode
 import io
 
@@ -7,27 +7,23 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    qr_ready = False
+    if request.method == 'POST':
+        #using strip() to remove any leading/trailing whitespace from the URL
+        url = request.form.get('url', '').strip()
+        #using if not url: to check if the URL is empty or None, and redirecting to the index page if it is
+        if not url:
+            return redirect(url_for('index'))
+        return redirect(url_for('index', url=url))
 
-    if request.method == "POST":
-        url = request.form.get("url", "").strip()
+    url = request.args.get('url', '')
+    qr_ready = bool(url)
+    return render_template('index.html', url=url, qr_ready=qr_ready)
 
-        if url:
-            # Add https:// if the user forgot it
-            if not url.startswith(("http://", "https://")):
-                url = "https://" + url
-
-            qr_ready = True
-            return render_template("index.html", qr_ready=qr_ready, url=url)
-
-    return render_template("index.html", qr_ready=qr_ready, url="")
-
-
-@app.route("/download")
+@app.route('/download')
 def download():
-    """Generates the QR code image on the fly and sends it to the browser as a download."""
-    url = request.args.get("url", "")
-
+    url = request.args.get('url', '')
+    preview = request.args.get('preview')
+    
     if not url:
         return "No URL provided", 400
 
